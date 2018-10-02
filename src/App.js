@@ -2,24 +2,20 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+class Projects extends Component{
+  render(){
+    return(
+      <div className='projectBox'>Project name: <a href={this.props.link}>{this.props.name}</a></div>
+    );
+  }
+}
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
+        <Projects name='Knife Store' link='https://github.com/tiller1010/My-Knife-Project'/>
       </div>
     );
   }

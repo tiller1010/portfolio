@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Description from './aboutMe.js';
+import Projects from './projectList.js';
 import MyFace from './MyFace.jpg';
 
 class Window extends Component{
@@ -18,28 +19,6 @@ class Window extends Component{
         </nav>
         <Description/>
       </div>
-    );
-  }
-}
-
-class Projects extends Component{
-  constructor(props){
-    super(props);
-    this.state={
-      viewed: '☐'
-    }
-    this.handleClick=this.handleClick.bind(this);
-  }
-
-  handleClick(){
-    this.setState({
-      viewed:'☑',
-    });
-  }
-
-  render(){
-    return(
-      <div onClick={this.handleClick} className='projectBox'>Project name: <a target='_blank' href={this.props.link}>{this.props.name}</a> Viewed: {this.state.viewed}</div>
     );
   }
 }

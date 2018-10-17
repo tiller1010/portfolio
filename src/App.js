@@ -4,10 +4,10 @@ import Description from './aboutMe.js';
 import Projects from './projectList.js';
 import MyFace from './MyFace.jpg';
 
-class HomePage extends Component{
+class Header extends Component{
   render(){
     return(
-      <div className='intro'>
+      <div>
         <img src={MyFace} id='face'/>
         <nav id='navBar'>
           <ul>
@@ -17,7 +17,6 @@ class HomePage extends Component{
             <li>Contact</li>
           </ul>
         </nav>
-        <Description/>
       </div>
     );
   }
@@ -34,13 +33,15 @@ class App extends Component {
     if(this.state.show=='Home'){
       return (
         <div>
-          <HomePage />
+          <Header />
+          <Description/>
         </div>
       );
     }
     if(this.state.show=='Projects'){
       return(
         <div>
+          <Header />
           <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
           <Projects name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/>
         </div>

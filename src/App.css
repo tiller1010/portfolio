@@ -8,6 +8,7 @@ body{
   bottom: 280px;
   width:70%;
   background-color: grey;
+  border-radius: 9px;
 }
 #navBar li{
   display: inline-block;
@@ -18,11 +19,19 @@ body{
   border-radius: 9px;
   color:white;
 }
+#navBar li:hover{
+  background-color: red;
+  cursor:pointer;
+}
 
 h3{
   text-indent: 5%;
-  padding-left:10%;
-  padding-right:10%;
+  padding: 30px;
+  margin:4%;
+  width:700px;
+  border: solid black;
+  background-color: white;
+  border-radius: 9px;
 }
 
 .projectBox{

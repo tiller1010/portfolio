@@ -3,7 +3,7 @@ import './App.css';
 import Description from './aboutMe.js';
 import MyFace from './MyFace.jpg';
 
-class Introduction extends Component{
+class Window extends Component{
   render(){
     return(
       <div className='intro'>
@@ -48,7 +48,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Introduction/>
+        <Window />
         <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
         <Projects name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/>
       </div>

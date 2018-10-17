@@ -4,7 +4,7 @@ import Description from './aboutMe.js';
 import Projects from './projectList.js';
 import MyFace from './MyFace.jpg';
 
-class Window extends Component{
+class HomePage extends Component{
   render(){
     return(
       <div className='intro'>
@@ -24,14 +24,28 @@ class Window extends Component{
 }
 
 class App extends Component {
+  constructor(props){
+    super();
+    this.state={
+      show:'Home'
+    }
+  }
   render() {
-    return (
-      <div className="App">
-        <Window />
-        <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
-        <Projects name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/>
-      </div>
-    );
+    if(this.state.show=='Home'){
+      return (
+        <div>
+          <HomePage />
+        </div>
+      );
+    }
+    if(this.state.show=='Projects'){
+      return(
+        <div>
+          <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
+          <Projects name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/>
+        </div>
+      );
+    }
   }
 }
 

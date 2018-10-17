@@ -2,6 +2,23 @@ body{
   background-color:#afe3d0;
 }
 
+#navBar{
+  position: absolute;
+  margin-left:55%;
+  bottom: 280px;
+  width:70%;
+  background-color: grey;
+}
+#navBar li{
+  display: inline-block;
+  padding:4%;
+  border:solid black;
+  background-color: grey;
+  margin:3px;
+  border-radius: 9px;
+  color:white;
+}
+
 h3{
   text-indent: 5%;
   padding-left:10%;

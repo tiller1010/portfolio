@@ -16,8 +16,10 @@ class Window extends Component{
     if(this.props.show==='Projects'){
       return(
         <div>
-          <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
+          <h3>My knife project is a interactive store page with a visual shopping cart. The app was made in an object oriented style. Each knife inherits the jQuery slide toggled description.</h3>
           <Projects name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/>
+          <h3>The family tree project also utilizes an object oriented style, but this project allows for more objects to be created by the user. The user may even insert the url of an image to add their own person to the tree. This project also includes a feature that uses regular expressions to search for all objects that match the given properies.</h3>
+          <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
         </div>
       );
     }

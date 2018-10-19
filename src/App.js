@@ -4,7 +4,33 @@ import Description from './aboutMe.js';
 import Projects from './projectList.js';
 import MyFace from './MyFace.jpg';
 
-class Header extends Component{
+class Window extends Component{
+  render() {
+    if(this.props.show=='Home'){
+      return (
+        <div>
+          <Description/>
+        </div>
+      );
+    }
+    if(this.props.show=='Projects'){
+      return(
+        <div>
+          <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
+          <Projects name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/>
+        </div>
+      );
+    }
+  }
+}
+
+class App extends Component {
+  constructor(props){
+    super();
+    this.state={
+      show:'Home'
+    }
+  }
   render(){
     return(
       <div>
@@ -17,36 +43,9 @@ class Header extends Component{
             <li>Contact</li>
           </ul>
         </nav>
+        <Window show='Home'/>
       </div>
     );
-  }
-}
-
-class App extends Component {
-  constructor(props){
-    super();
-    this.state={
-      show:'Home'
-    }
-  }
-  render() {
-    if(this.state.show=='Home'){
-      return (
-        <div>
-          <Header />
-          <Description/>
-        </div>
-      );
-    }
-    if(this.state.show=='Projects'){
-      return(
-        <div>
-          <Header />
-          <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
-          <Projects name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/>
-        </div>
-      );
-    }
   }
 }
 

@@ -35,7 +35,7 @@ class App extends Component {
 
   navigate(page){
     this.setState({
-      show: 'Projects'
+      show: page
     });
   }
 
@@ -45,8 +45,8 @@ class App extends Component {
         <img src={MyFace} id='face'/>
         <nav id='navBar'>
           <ul>
-            <li>About</li>
-            <li onClick={this.navigate}>Projects</li>
+            <li onClick={() => this.navigate('Home')}>About</li>
+            <li onClick={() => this.navigate('Projects')}>Projects</li>
             <li>Links</li>
             <li>Contact</li>
           </ul>

@@ -6,14 +6,14 @@ import MyFace from './MyFace.jpg';
 
 class Window extends Component{
   render() {
-    if(this.props.show=='Home'){
+    if(this.props.show==='Home'){
       return (
         <div>
           <Description/>
         </div>
       );
     }
-    if(this.props.show=='Projects'){
+    if(this.props.show==='Projects'){
       return(
         <div>
           <Projects name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/>
@@ -30,7 +30,15 @@ class App extends Component {
     this.state={
       show:'Home'
     }
+    this.navigate=this.navigate.bind(this);
   }
+
+  navigate(page){
+    this.setState({
+      show: 'Projects'
+    });
+  }
+
   render(){
     return(
       <div>
@@ -38,12 +46,12 @@ class App extends Component {
         <nav id='navBar'>
           <ul>
             <li>About</li>
-            <li>Projects</li>
+            <li onClick={this.navigate}>Projects</li>
             <li>Links</li>
             <li>Contact</li>
           </ul>
         </nav>
-        <Window show='Home'/>
+        <Window show={this.state.show}/>
       </div>
     );
   }

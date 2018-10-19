@@ -44,7 +44,7 @@ class App extends Component {
   render(){
     return(
       <div>
-        <img src={MyFace} id='face'/>
+        <img src={MyFace} id='face' alt='My face'/>
         <nav id='navBar'>
           <ul>
             <li onClick={() => this.navigate('Home')}>About</li>

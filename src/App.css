@@ -2,6 +2,14 @@ body{
   background-color:#afe3d0;
 }
 
+#face{
+  position: relative;
+  left:5%;
+  top:20px;
+  border: solid black;
+  border-radius: 9px;
+}
+
 #navBar{
   position: absolute;
   margin-left:55%;

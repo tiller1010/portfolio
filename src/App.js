@@ -28,7 +28,16 @@ class Window extends Component{
       return(
         <div>
           <Link source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
+          <Link source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
+          <Link source='http://assets.stickpng.com/thumbs/5847f91ccef1014c0b5e48b8.png' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
         </div>
+      );
+    }
+    if(this.props.show==='Contact'){
+      return(
+        <h3>
+          Email: tiller1010@gmail.com
+        </h3>
       );
     }
   }
@@ -58,7 +67,7 @@ class App extends Component {
             <li onClick={() => this.navigate('Home')}>About</li>
             <li onClick={() => this.navigate('Projects')}>Projects</li>
             <li onClick={() => this.navigate('Links')}>Links</li>
-            <li>Contact</li>
+            <li onClick={() => this.navigate('Contact')}>Contact</li>
           </ul>
         </nav>
         <Window show={this.state.show}/>

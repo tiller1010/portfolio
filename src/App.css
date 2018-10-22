@@ -42,13 +42,20 @@ h3{
   border-radius: 9px;
 }
 
+.link{
+  width:100px;
+  height:100px;
+  margin:100px;
+}
+
 .projectBox{
   border:solid #8fa7ff;
   border-radius:25px;
   background-color:#9ee2bc;
   font-weight:bold;
-  padding:10px;
+  padding:20px;
   margin:4%;
   margin-left:35%;
   width:fit-content;
+  text-indent: 0px;
 }

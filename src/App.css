@@ -13,17 +13,17 @@ body{
 #navBar{
   position: absolute;
   right:0px;
-  width:500px;
-  margin-top: 30px;
+  width:700px;
+  margin-top: 40px;
   background-color: grey;
   border-radius: 9px;
 }
 #navBar li{
   display: inline-block;
-  padding:10px;
+  padding:10px 30px 10px 30px;
   border:solid black;
   background-color: grey;
-  margin:3px;
+  margin:3px 20px 3px 20px;
   border-radius: 9px;
   color:white;
 }
@@ -33,7 +33,7 @@ body{
 }
 
 .window{
-  margin-top: 125px;
+  margin-top: 150px;
 }
 
 h3{
@@ -46,10 +46,15 @@ h3{
   border-radius: 9px;
 }
 
+#icons{
+  position: absolute;
+  right:1px;
+  top:10px;
+}
 .link{
-  width:100px;
-  height:100px;
-  margin:50px;
+  width:60px;
+  height:60px;
+  margin:10px 50px 0px 50px;
 }
 
 .projectBox{
@@ -69,11 +74,17 @@ h3{
     width:140px;
   }
   #navBar{
-    width:370px;
+    width:100%;
   }
   #navBar li{
     width:50px;
     font-size: 13px;
+    margin:3px 13px 3px 13px;
+    padding:10px;
   }
-
+  .link{
+    height:40px;
+    width:40px;
+    margin:10px;
+  }
 }

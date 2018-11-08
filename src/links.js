@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Link extends Component{
+class LinkIcon extends Component{
   render(){
     return(
       <a target='_blank' rel="noopener noreferrer" href={this.props.destination}>
@@ -10,4 +10,4 @@ class Link extends Component{
   }
 }
 
-export default Link;
+export default LinkIcon;

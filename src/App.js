@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './App.css';
 import Description from './aboutMe.js';
 import Projects from './projectList.js';
-import Link from './links.js';
+import LinkIcon from './links.js';
 import MyFace from './MyFace.jpg';
 
 class Window extends Component{
@@ -55,13 +55,13 @@ class App extends Component {
       <div>
         <img src={MyFace} id='face' alt='My face'/>
         <div id='icons'>
-          <Link source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
-          <Link source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
-          <Link source='http://assets.stickpng.com/thumbs/5847f91ccef1014c0b5e48b8.png' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
+          <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
+          <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
+          <LinkIcon source='http://assets.stickpng.com/thumbs/5847f91ccef1014c0b5e48b8.png' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
         </div>
         <nav id='navBar'>
           <ul>
-            <li onClick={() => this.navigate('Home')}>About</li>
+            <li><Link to='/'>About</Link></li>
             <li onClick={() => this.navigate('Projects')}>Projects</li>
             <li onClick={() => this.navigate('Contact')}>Contact</li>
           </ul>

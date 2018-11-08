@@ -26,6 +26,7 @@ body{
   margin:3px 20px 3px 20px;
   border-radius: 9px;
   color:white;
+  text-decoration: none;
 }
 #navBar li:hover{
   background-color: red;

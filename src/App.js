@@ -12,7 +12,7 @@ class Window extends Component{
     return(
       <main>
         <Switch>
-          <Route exact path='/' component={Description}/>
+          <Route path='/' component={Description}/>
           <Route path='/projects' component={Projects}/>
           <Route path='/contact' render={()=>
             <h3 className='window'>

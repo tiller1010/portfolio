@@ -12,7 +12,7 @@ class Window extends Component{
     return(
       <main>
         <Switch>
-          <Route path='/' component={Description}/>
+          <Route exact path='/portfolio' component={Description}/>
           <Route path='/projects' component={Projects}/>
           <Route path='/contact' render={()=>
             <h3 className='window'>
@@ -37,7 +37,7 @@ class App extends Component {
         </div>
         <nav id='navBar'>
           <ul>
-            <Link to='/'><li>About</li></Link>
+            <Link to='/portfolio'><li>About</li></Link>
             <Link to='/projects'><li>Projects</li></Link>
             <Link to='/contact'><li>Contact</li></Link>
           </ul>

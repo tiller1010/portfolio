@@ -1,5 +1,5 @@
 body{
-  background-color:#afe3d0;
+  background-image:linear-gradient(to right,#afe3d0,#a26d5894,#d2cecc);
 }
 
 #face{
@@ -8,6 +8,16 @@ body{
   top:20px;
   border: solid black;
   border-radius: 9px;
+}
+
+#paint{
+  position: absolute;
+  height:1100px;
+  width:800px;
+  border-left:solid #68846d 40px;
+  right:1px;
+  z-index: -1;
+  opacity: .6;
 }
 
 #navBar{
@@ -73,6 +83,9 @@ h3{
 @media only screen and (max-width:768px){
   #face{
     width:140px;
+  }
+  #paint{
+    width:80%;
   }
   #navBar{
     width:100%;

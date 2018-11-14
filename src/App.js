@@ -6,6 +6,7 @@ import Description from './aboutMe.js';
 import Projects from './projectList.js';
 import LinkIcon from './links.js';
 import MyFace from './MyFace.jpg';
+import Painting from './painting.jpg';
 
 class Window extends Component{
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
   render(){
     return(
       <div>
+        <img src={Painting} id='paint' alt='A painting by me'/>
         <img src={MyFace} id='face' alt='My face'/>
         <div id='icons'>
           <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>

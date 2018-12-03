@@ -16,8 +16,11 @@ class Window extends Component{
           <Route exact path='/portfolio' component={Description}/>
           <Route path='/projects' component={Projects}/>
           <Route path='/contact' render={()=>
-            <h3 className='window'>
-                Email: tiller1010@gmail.com
+            <h3 className='window' id='no-indent'>
+                Email: tiller1010@gmail.com <br/>
+                Meetup: ...<br/>
+                Upwork: ....<br/>
+                LinkedIn: ...
             </h3>
           }/>
         </Switch>
@@ -32,6 +35,7 @@ class App extends Component {
       <div>
         <img src={Painting} id='paint' alt='A painting by me'/>
         <img src={MyFace} id='face' alt='My face'/>
+        <h1 id='name'>Tyler Trout</h1>
         <div id='icons'>
           <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
           <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>

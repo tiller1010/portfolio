@@ -10,6 +10,18 @@ body{
   border-radius: 9px;
 }
 
+#name{
+  text-align: right;
+  margin:0px 40px 0px 0px;
+  font-size: 40px;
+  position: relative;
+  top:30px;
+  letter-spacing: 6px;
+  color:#00ba8a;
+  text-shadow: 2px 2px 2px black;
+  font-family: "Francois One", Helvetica, sans-serif;
+}
+
 #paint{
   position: absolute;
   height:1100px;
@@ -55,6 +67,10 @@ h3{
   border: solid black;
   background-color: white;
   border-radius: 9px;
+  text-align: justify;
+}
+#no-indent{
+  text-indent:0px;
 }
 
 #icons{
@@ -74,9 +90,9 @@ h3{
   background-color:#9ee2bc;
   font-weight:bold;
   padding:20px;
-  margin:4%;
-  margin-left:35%;
-  width:fit-content;
+  margin:15px 0px 4px 80%;
+  width:100px;
+  text-align: center;
   text-indent: 0px;
 }
 
@@ -85,7 +101,7 @@ h3{
     width:140px;
   }
   #paint{
-    width:80%;
+    width:50%;
   }
   #navBar{
     width:100%;
@@ -100,5 +116,12 @@ h3{
     height:40px;
     width:40px;
     margin:10px;
+  }
+  h3{
+    font-size:16px;
+    text-align: left;
+  }
+  .projectBox{
+    margin-left:50%;
   }
 }

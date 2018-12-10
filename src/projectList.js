@@ -31,8 +31,8 @@ class Projects extends Component{
   render(){
     return(
       <div className='window'>
-        <h3>My knife project is a interactive store page with a visual shopping cart. The app was made in an object oriented style. Each knife inherits the jQuery slide toggled description.
-          <ProjectLink name='Knife Store' link='https://tiller1010.github.io/My-Knife-Project/'/></h3>
+        <h3>Generic Store is an interactive store page with a visual shopping cart. The app was made in an object oriented style. Each object inherits the jQuery slide toggled description.
+          <ProjectLink name='Generic Store' link='https://tiller1010.github.io/generic-store/'/></h3>
         <h3>The family tree project also utilizes an object oriented style, but this project allows for more objects to be created by the user. The user may even insert the url of an image to add their own person to the tree. This project also includes a feature that uses regular expressions to search for all objects that match the given properies.
           <ProjectLink name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/></h3>
         <h3>This website template includes multiple pages and a few neat features. The website is responsive and should change the appearance of the navigation bar. The website scales to fit on a mobile screen with a media query.

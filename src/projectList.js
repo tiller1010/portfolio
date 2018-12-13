@@ -31,7 +31,7 @@ class Projects extends Component{
   render(){
     return(
       <div className='window'>
-        <h3>Generic Store is an interactive store page with a visual shopping cart. The app was made in an object oriented style. Each object inherits the jQuery slide toggled description.
+        <h3>Generic Store is an interactive store page with a visual shopping cart. The app was made in an object oriented style. Each object contains a title, a brief summary, and a price. The objects are stored in a shopping cart in the form of an array. That array is stored in session storage, where it is parsed by JSON when the user navigates to the checkout page.
           <ProjectLink name='Generic Store' link='https://tiller1010.github.io/generic-store/'/></h3>
         <h3>The family tree project also utilizes an object oriented style, but this project allows for more objects to be created by the user. The user may even insert the url of an image to add their own person to the tree. This project also includes a feature that uses regular expressions to search for all objects that match the given properies.
           <ProjectLink name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/></h3>

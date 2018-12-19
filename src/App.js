@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 import './App.css';
 import Description from './aboutMe.js';
 import Projects from './projectList.js';
+import Contacts from './contacts.js'
 import LinkIcon from './links.js';
 import MyFace from './MyFace.jpg';
 import Painting from './painting.jpg';
@@ -15,14 +16,7 @@ class Window extends Component{
         <Switch>
           <Route exact path='/portfolio' component={Description}/>
           <Route path='/projects' component={Projects}/>
-          <Route path='/contact' render={()=>
-            <h3 className='window' id='no-indent'>
-                Email: tiller1010@gmail.com <br/>
-                Meetup: ...<br/>
-                Upwork: ....<br/>
-                LinkedIn: ...
-            </h3>
-          }/>
+          <Route path='/contact' component={Contacts}/>
         </Switch>
       </main>
     );

@@ -64,13 +64,12 @@ h3{
   padding: 30px;
   margin:4%;
   width:70%;
-  border: solid black;
-  background-color: white;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background: linear-gradient(175deg,#466451bb 75%,#343);
+  color:#ddd;
   border-radius: 9px;
   text-align: justify;
-}
-#no-indent{
-  text-indent:0px;
+  box-shadow:10px 10px 40px #343;
 }
 
 #icons{
@@ -96,6 +95,30 @@ h3{
   text-indent: 0px;
 }
 
+#contacts{
+  text-indent:0px;
+  line-height: 60px;
+}
+.contact{
+  padding:9px;
+  margin-right: 10px;
+  color:#dddddd;
+  border-radius: 3px;
+}
+#email{
+  background-color: #be3a2b;
+}
+#meetup{
+  background-color: #ee3e5d;
+}
+#upwork{
+  background-color: #21e040;
+  color:#777;
+}
+#linkedIn{
+  background-color: #0073af;
+}
+
 @media only screen and (max-width:768px){
   #face{
     width:140px;
@@ -118,6 +141,8 @@ h3{
     margin:10px;
   }
   h3{
+    width:80%;
+    margin:auto;
     font-size:16px;
     text-align: left;
   }

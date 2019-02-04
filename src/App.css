@@ -34,8 +34,8 @@ body{
 #navBar li{
   display: inline-block;
   padding:10px 30px 10px 30px;
-  border:solid black;
-  background-color: grey;
+  background-color: #00aa5a;
+  box-shadow: 1px 1px black;
   margin:3px 20px 3px 20px;
   border-radius: 9px;
   color:white;

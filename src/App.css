@@ -1,5 +1,5 @@
 body{
-  background-image:linear-gradient(to right,#afe3d0,#a26d5894,#d2cecc);
+  background-image:linear-gradient(to right,#afe3d0 50%,#a26d5894,#d2cecc);
 }
 
 #face{
@@ -22,22 +22,13 @@ body{
   font-family: "Francois One", Helvetica, sans-serif;
 }
 
-#paint{
-  position: absolute;
-  height:1100px;
-  width:800px;
-  border-left:solid #68846d 40px;
-  right:1px;
-  z-index: -1;
-  opacity: .6;
-}
-
 #navBar{
   position: absolute;
   right:0px;
   width:700px;
   margin-top: 40px;
-  background-color: grey;
+  background-color:#d5cccc;
+  box-shadow: -5px 5px #9f9;
   border-radius: 9px;
 }
 #navBar li{

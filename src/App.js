@@ -7,7 +7,6 @@ import Projects from './projectList.js';
 import Contacts from './contacts.js'
 import LinkIcon from './links.js';
 import MyFace from './MyFace.jpg';
-import Painting from './painting.jpg';
 
 class Window extends Component{
   render() {
@@ -27,7 +26,6 @@ class App extends Component {
   render(){
     return(
       <div>
-        <img src={Painting} id='paint' alt='A painting by me'/>
         <img src={MyFace} id='face' alt='My face'/>
         <h1 id='name'>Tyler Trout</h1>
         <div id='icons'>

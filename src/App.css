@@ -1,5 +1,5 @@
 body{
-  background-image:linear-gradient(to left,#afe3d0 60%,#00ba8a);
+  background-image:linear-gradient(to right,#00ba8a,#afe3d0 ,#afe3d0 60%);
 }
 
 #face{
@@ -71,9 +71,9 @@ h3{
   top:10px;
 }
 .link{
-  width:60px;
-  height:60px;
-  margin:10px 50px 0px 50px;
+  width:50px;
+  height:50px;
+  margin:10px 45px 0px 45px;
 }
 
 .projectBox{
@@ -137,6 +137,11 @@ a{
   .projectBox{
     margin-left:70%;
   }
+  .link{
+    height:40px;
+    width:40px;
+    margin:10px;
+  }
 }
 @media only screen and (max-width:768px){
   #face{
@@ -158,8 +163,8 @@ a{
     padding:10px;
   }
   .link{
-    height:40px;
-    width:40px;
+    height:30px;
+    width:30px;
     margin:10px;
   }
   h3{
@@ -178,5 +183,25 @@ a{
     font-size: 14px;
     width:50px;
     word-wrap: break-word;
+  }
+}
+@media only screen and (max-width:320px){
+  #name{
+    position: absolute;
+    text-align: right;
+    top:50px;
+    font-size: 40px;
+  }
+  #face{
+    height:120px;
+    width:120px;
+  }
+  #navBar li{
+    margin:4px;
+  }
+  .link{
+    width:25px;
+    height:25px;
+    margin:7px;
   }
 }

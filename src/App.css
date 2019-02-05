@@ -1,21 +1,21 @@
 body{
-  background-image:linear-gradient(to right,#afe3d0 50%,#a26d5894,#d2cecc);
+  background-image:linear-gradient(to left,#afe3d0 60%,#00ba8a);
 }
 
 #face{
   position: relative;
   left:5%;
   top:20px;
-  border: solid black;
+  border: solid #00ba8a;
   border-radius: 9px;
 }
 
 #name{
-  text-align: right;
   margin:0px 40px 0px 0px;
-  font-size: 40px;
-  position: relative;
-  top:30px;
+  font-size: 90px;
+  position: absolute;
+  top:170px;
+  right:20px;
   letter-spacing: 6px;
   color:#00ba8a;
   text-shadow: 2px 2px 2px black;
@@ -28,7 +28,7 @@ body{
   width:700px;
   margin-top: 40px;
   background-color:#d5cccc;
-  box-shadow: -5px 5px #9f9;
+  box-shadow: 0px 5px 2px #00ba8a;
   border-radius: 9px;
 }
 #navBar li{
@@ -42,7 +42,9 @@ body{
   text-decoration: none;
 }
 #navBar li:hover{
-  background-color: red;
+  background-color: #9f9;
+  font-weight: bold;
+  color:#49d;
   cursor:pointer;
 }
 
@@ -75,15 +77,22 @@ h3{
 }
 
 .projectBox{
-  border:solid #8fa7ff;
   border-radius:25px;
-  background-color:#9ee2bc;
+  background-color:#00aa5a;
+  color: white;
   font-weight:bold;
   padding:20px;
   margin:15px 0px 4px 80%;
   width:100px;
   text-align: center;
   text-indent: 0px;
+}
+.projectBox:hover{
+  background-color: #9f9;
+  color:#49d;
+}
+a{
+  text-decoration: none;
 }
 
 #contacts{
@@ -93,7 +102,7 @@ h3{
 .contact{
   padding:9px;
   margin-right: 10px;
-  color:#dddddd;
+  color:white;
   border-radius: 3px;
 }
 #emailBox{
@@ -112,7 +121,6 @@ h3{
 }
 #upwork{
   background-color: #21e040;
-  color:#777;
 }
 #linkedIn{
   background-color: #0073af;
@@ -121,12 +129,15 @@ h3{
   font-size: 14px;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:900px){
   #face{
     width:140px;
   }
-  #paint{
-    width:50%;
+  #name{
+    font-size: 50px;
+    position: relative;
+    top:35px;
+    left:60px;
   }
   #navBar{
     width:100%;
@@ -147,6 +158,9 @@ h3{
     margin:auto;
     font-size:16px;
     text-align: left;
+  }
+  .projectFrame{
+    margin-bottom: 20px;
   }
   .projectBox{
     margin-left:50%;

@@ -14,8 +14,8 @@ class Window extends Component{
       <main>
         <Switch>
           <Route exact path='/portfolio' component={Description}/>
-          <Route path='/projects' component={Projects}/>
-          <Route path='/contact' component={Contacts}/>
+          <Route path='/portfolio/projects' component={Projects}/>
+          <Route path='/portfolio/contact' component={Contacts}/>
         </Switch>
       </main>
     );
@@ -36,8 +36,8 @@ class App extends Component {
         <nav id='navBar'>
           <ul>
             <Link to='/portfolio'><li>About</li></Link>
-            <Link to='/projects'><li>Projects</li></Link>
-            <Link to='/contact'><li>Contact</li></Link>
+            <Link to='/portfolio/projects'><li>Projects</li></Link>
+            <Link to='/portfolio/contact'><li>Contact</li></Link>
           </ul>
         </nav>
         <Window/>

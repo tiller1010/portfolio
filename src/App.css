@@ -128,8 +128,17 @@ a{
 #contacts a{
   font-size: 14px;
 }
-
 @media only screen and (max-width:900px){
+  #name{
+    font-size: 70px;
+    top:190px;
+    right:5px;
+  }
+  .projectBox{
+    margin-left:70%;
+  }
+}
+@media only screen and (max-width:768px){
   #face{
     width:140px;
   }

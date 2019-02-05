@@ -37,6 +37,8 @@ class Projects extends Component{
           <ProjectLink name= 'Family Tree' link='https://tiller1010.github.io/familyTree'/></h3>
         <h3 className='projectFrame'>This website template includes multiple pages and a few neat features. The website is responsive and should change the appearance of the navigation bar. The website scales to fit on a mobile screen with a media query.
           <ProjectLink name= 'Website Template' link='https://tiller1010.github.io/template1'/></h3>
+        <h3 className='projectFrame'>Redux vacation is a vacation planner that uses the React-Redux library. Redux is used to contain the state of the application in a single source of truth, tracking the booking status of the flight, destination, and hotel. The user interface will re-render everytime there is a change of state.
+          <ProjectLink name= 'Redux Vacation' link='https://tiller1010.github.io/redux-vacation'/></h3>
       </div>
     );
   }

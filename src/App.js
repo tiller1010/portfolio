@@ -26,7 +26,9 @@ class App extends Component {
   render(){
     return(
       <div>
-        <img src={MyFace} id='face' alt='My face'/>
+        <div id='faceContainer'>
+          <img src={MyFace} id='face' alt='My face'/>
+        </div>
         <h1 id='name'>Tyler Trout</h1>
         <div id='icons'>
           <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>

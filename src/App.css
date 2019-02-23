@@ -1,5 +1,6 @@
 body{
   background-image:linear-gradient(to right,#00ba8a,#afe3d0 ,#afe3d0 60%);
+  padding-bottom: 20px;
 }
 
 #faceContainer{
@@ -165,7 +166,7 @@ a{
     position: relative;
     top:35px;
     left:60px;
-    width:300px;
+    width:390px;
   }
   #navBar{
     width:100%;

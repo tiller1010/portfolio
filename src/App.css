@@ -166,7 +166,8 @@ a{
     position: relative;
     top:35px;
     left:60px;
-    width:390px;
+    width:300px;
+    white-space: nowrap;
   }
   #navBar{
     width:100%;
@@ -205,7 +206,10 @@ a{
     position: absolute;
     text-align: right;
     top:50px;
+    left:90px;
     font-size: 35px;
+    width:200px;
+    white-space: normal;
   }
   #faceContainer{
     height:120px;

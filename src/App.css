@@ -52,7 +52,7 @@ body{
 }
 #navBar li:hover{
   background-color: #9f9;
-  font-weight: bold;
+  text-decoration: underline;
   color:#49d;
   cursor:pointer;
 }
@@ -83,6 +83,24 @@ h3{
   width:50px;
   height:50px;
   margin:10px 45px 0px 45px;
+}
+
+.codeBox{
+  position: absolute;
+  transform: translateX(-350%);
+  border-radius:25px;
+  background-color:#005aaa;
+  color: white;
+  font-weight:bold;
+  padding:34px 20px 34px 20px;
+  margin:15px 0px 4px 80%;
+  width:100px;
+  text-align: center;
+  text-indent: 0px;
+}
+.codeBox:hover{
+  background-color: #99f;
+  color:#94d;
 }
 
 .projectBox{
@@ -192,6 +210,10 @@ a{
   .projectFrame{
     margin-bottom: 20px;
   }
+  .codeBox{
+    padding: 20px;
+    left:15%;
+  }
   .projectBox{
     margin-left:50%;
   }
@@ -201,7 +223,20 @@ a{
     word-wrap: break-word;
   }
 }
-@media only screen and (max-width:320px){
+
+@media only screen and (max-width:620px){
+  .codeBox{
+    left: 160px;
+  }
+}
+
+@media only screen and (max-width:480px){
+  .codeBox{
+    left: 210px;
+  }
+}
+
+@media only screen and (max-width:360px){
   #name{
     position: absolute;
     text-align: right;
@@ -227,5 +262,8 @@ a{
     width:25px;
     height:25px;
     margin:7px;
+  }
+  .codeBox{
+    left:250px;
   }
 }

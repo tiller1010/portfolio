@@ -145,14 +145,7 @@ a{
 }
 
 #contacts{
-  text-indent:0px;
-  line-height: 60px;
-}
-.contact{
-  padding:9px;
-  margin-right: 10px;
-  color:white;
-  border-radius: 3px;
+  text-align: center;
 }
 #emailBox{
   padding:20px;
@@ -162,21 +155,7 @@ a{
   left:-20px;
   text-align: center;
 }
-#email{
-  background-color: #be3a2b;
-}
-#meetup{
-  background-color: #ee3e5d;
-}
-#upwork{
-  background-color: #21e040;
-}
-#linkedIn{
-  background-color: #0073af;
-}
-#contacts a{
-  font-size: 14px;
-}
+
 @media only screen and (max-width:900px){
   #name{
     font-size: 70px;
@@ -242,11 +221,6 @@ a{
   }
   .projectBox{
     margin-left:50%;
-  }
-  #contacts a{
-    font-size: 14px;
-    width:50px;
-    word-wrap: break-word;
   }
 }
 

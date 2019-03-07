@@ -30,7 +30,7 @@ class ProjectLink extends Component{
 class Projects extends Component{
   render(){
     return(
-      <div className='window'>
+      <div className='window animated' style={{visibility:'visible'}}>
         <h3 className='projectFrame'>Generic Store is an interactive store page with a visual shopping cart indicator. The app was made in an object oriented style. Each object contains a title, a brief summary, and a price. The objects are stored in a shopping cart in the form of an array. That array is stored in session storage, where it is parsed by JSON when the user navigates to the checkout page.
           <a target='_blank' rel="noopener noreferrer" href='https://github.com/tiller1010/generic-store'><div className='codeBox'>Code</div></a>
           <ProjectLink name='Generic Store' link='https://tiller1010.github.io/generic-store/'/></h3>

@@ -29,13 +29,20 @@ class Description extends Component{
 
   componentDidMount(){
     let frames = document.querySelectorAll('.window');
-    frames[0].classList.add('animated');
+    document.addEventListener('scroll', function(){
+      for(let i=1;i<frames.length;i++){
+        if(frames[i].getBoundingClientRect().top<385){
+          frames[i].style.visibility='visible';
+          frames[i].classList.add('animated');
+        }
+      }
+    })
   }
 
   render(){
     return(
       <div className='animatedContainer'>
-        <h3 className='window'>
+        <h3 className='window animated' style={{visibility:'visible'}}>
           <header>Introduction</header><hr/>
           <p>
             Looking for a new web developer that is easy to get along with and is always hungry to learn more? My name is Tyler Trout, and I am a self-taught aspiring web developer. I am looking to achieve my first employment oppritunity.

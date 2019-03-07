@@ -60,6 +60,25 @@ body{
 .window{
   margin-top: 150px;
 }
+.window header{
+  color:#00cb9b;
+  text-shadow: 2px 2px 2px #232;
+  font-size:30px;
+  font-family: "Francois One", Helvetica, sans-serif;
+  letter-spacing: 6px;
+}
+.rightSide{
+  position: relative;
+  margin-top: 10px;
+  right:-15%;
+}
+.rightSide header{
+  text-align: right;
+  transform: translateX(-30px);
+}
+.leftSide{
+  margin-top: 10px
+}
 
 h3{
   text-indent: 5%;
@@ -72,6 +91,9 @@ h3{
   border-radius: 9px;
   text-align: justify;
   box-shadow:10px 10px 40px #343;
+}
+p{
+  text-indent: 2%;
 }
 
 #icons{
@@ -207,6 +229,9 @@ a{
     font-size:16px;
     text-align: left;
   }
+  .rightSide{
+    right:0px;
+  }
   .projectFrame{
     margin-bottom: 20px;
   }
@@ -227,6 +252,13 @@ a{
 @media only screen and (max-width:620px){
   .codeBox{
     left: 160px;
+  }
+}
+
+@media only screen and (max-width:540px){
+  .rightSide header{
+    text-align: left;
+    transform: translateX(0px);
   }
 }
 

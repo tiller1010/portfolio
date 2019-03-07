@@ -1,3 +1,27 @@
+/*
+Animations
+animation-name: flyIn;
+animation-duration: 2s;
+*/
+
+@keyframes flyIn{
+  0%{
+    transform: rotateX(80deg) scale(.7);
+  }
+  100%{
+    transform: rotateX(0deg) scale(1);
+  }
+}
+
+.animatedContainer{
+  perspective: 3000px;
+}
+
+.animated{
+  animation-name: flyIn;
+  animation-duration: .5s;
+}
+
 body{
   background-image:linear-gradient(to right,#00ba8a,#afe3d0 ,#afe3d0 60%);
   padding-bottom: 20px;

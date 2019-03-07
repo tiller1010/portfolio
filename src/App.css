@@ -217,6 +217,7 @@ a{
     font-size: 13px;
     margin:3px 16px 3px 16px;
     padding:10px;
+    text-align: center;
   }
   .link{
     height:30px;
@@ -259,6 +260,10 @@ a{
   .rightSide header{
     text-align: left;
     transform: translateX(0px);
+  }
+  #bookSeperator{
+    font-size: 21px;
+    margin-bottom:0;
   }
 }
 

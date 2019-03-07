@@ -1,5 +1,28 @@
 import React, { Component } from 'react';
 
+const bookSeperatorStlye={
+  textDecoration:'underline',
+  textAlign: 'center',
+  width:'80%',
+  margin:'100px auto',
+  fontFamily:'serif',
+  background: 'white',
+  letterSpacing: '4px',
+  boxShadow:'3px 3px 0 #ddd, 6px 6px 0 #ccc, 9px 9px 0 #bbb, 12px 12px 0 #aaa',
+  padding:'10px 0'
+}
+
+const Book=(props)=>{
+  return(
+    <div className='window'>
+      <h3 className={props.side + 'Side'}>
+        <img src={props.image} alt={props.alt} style={{float: props.side, height:'200px', width:'160px'}}/>
+        <p>{props.description}</p>
+      </h3>
+    </div>
+  )
+}
+
 class Description extends Component{
   render(){
     return(
@@ -28,6 +51,11 @@ class Description extends Component{
             I love to learn new things and do so every day. As of the beginning of this year, I have learned how to set up my own WordPress sites as well as the basics of developing themes from scratch. Currently, I have been learning some backend technologies such as PHP, SQL, and Node.js. My hope is to one day have the abilities to understand and work on any part of a web application and deliver an exceptional user experience. Coding has always and intrigued and delighted me, and I am excited for what I might create in the future!
           </p>
         </h3>
+        <h1 id='bookSeperator' style={bookSeperatorStlye}>Books I have read:</h1>
+        <Book side='left' image='https://images-na.ssl-images-amazon.com/images/I/51lu4ArIFYL._SX258_BO1,204,203,200_.jpg' description=''/>
+        <Book side='right' image='https://images-na.ssl-images-amazon.com/images/I/51lu4ArIFYL._SX258_BO1,204,203,200_.jpg' description=''/>
+        <Book side='left' image='https://images-na.ssl-images-amazon.com/images/I/51lu4ArIFYL._SX258_BO1,204,203,200_.jpg' description=''/>
+        <Book side='right' image='https://images-na.ssl-images-amazon.com/images/I/51lu4ArIFYL._SX258_BO1,204,203,200_.jpg' description=''/>
       </div>
     );
   }

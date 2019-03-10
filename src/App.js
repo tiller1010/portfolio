@@ -36,6 +36,7 @@ class App extends Component {
           <LinkIcon source='http://assets.stickpng.com/thumbs/5847f91ccef1014c0b5e48b8.png' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
           <LinkIcon source='https://files.startupranking.com/startup/thumb/38390_69f954470a75c5911fc23cf91e70453ef07a07aa_edabit_m.jpeg' alternative='edabit' destination='https://edabit.com/user/kCWDEGqZhSpYbmhoZ'/>
         </div>
+        <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={require('./pencil.png')} alt='pencil icon'/>My Blog</a>
         <nav id='navBar'>
           <ul>
             <Link to='/'><li>About</li></Link>

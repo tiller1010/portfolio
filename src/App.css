@@ -141,6 +141,30 @@ p{
   margin:10px 45px 0px 45px;
 }
 
+#blogLink{
+  height:70px;
+  width:240px;
+  position: absolute;
+  right:0px;
+  background: #0cf;
+  top:110px;
+  font-size:30px;
+  font-family: "Francois One", Helvetica, sans-serif;
+  color:white;
+  padding-bottom: 20px;
+  transition: box-shadow .5s;
+}
+#blogLink:hover{
+  box-shadow: -10px 0px blue;
+}
+#pencilIcon{
+  height:60px;
+  width:60px;
+  filter:invert(1);
+  position: relative;
+  top:15px;
+}
+
 .codeBox{
   position: absolute;
   transform: translateX(-350%);
@@ -222,6 +246,18 @@ a{
     width:300px;
     white-space: nowrap;
   }
+
+  #blogLink{
+    width:160px;
+    height:40px;
+    font-size: 20px;
+  }
+  #pencilIcon{
+    width:40px;
+    height:40px;
+    top: 10px;
+  }
+
   #navBar{
     width:100%;
   }
@@ -287,25 +323,25 @@ a{
   }
 }
 
-@media only screen and (max-width:375px){
-  #name{
-    position: absolute;
-    text-align: right;
-    top:50px;
-    left:90px;
-    font-size: 35px;
-    width:200px;
-    white-space: normal;
-  }
+@media only screen and (max-width:390px){
+
   #faceContainer{
-    height:120px;
+    height:130px;
     width:120px;
   }
   #face{
-    height:160px;
+    height:210px;
     width:120px;
-    transform: translateY(0);
+    transform: translateY(-1);
   }
+
+  #name{
+    font-size: 40px;
+    width:0;
+    white-space: nowrap;
+    transform: translateX(-25px);
+  }
+
   #navBar li{
     margin:4px;
   }
@@ -314,6 +350,12 @@ a{
     height:25px;
     margin:7px;
   }
+
+  #blogLink{
+    width:140px;
+    top:95px;
+  }
+
   .codeBox{
     left:250px;
   }

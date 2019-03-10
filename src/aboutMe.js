@@ -8,7 +8,6 @@ const bookSeperatorStlye={
   fontFamily:'serif',
   background: 'white',
   letterSpacing: '4px',
-  boxShadow:'3px 3px 0 #ddd, 6px 6px 0 #ccc, 9px 9px 0 #bbb, 12px 12px 0 #aaa',
   padding:'10px 0',
   transform:'translateY(40px)'
 }
@@ -29,14 +28,30 @@ class Description extends Component{
 
   componentDidMount(){
     let frames = document.querySelectorAll('.window');
+    const booksRead = document.querySelector('#bookSeperator');
+    const canvas = document.getElementById('arrowIndicator');
+    const ctx = canvas.getContext('2d');
+
     document.addEventListener('scroll', function(){
       for(let i=1;i<frames.length;i++){
         if(frames[i].getBoundingClientRect().top<385){
+          canvas.style.display='none';
           frames[i].style.visibility='visible';
           frames[i].classList.add('animated');
         }
       }
+      if(booksRead.getBoundingClientRect().top<385){
+        booksRead.classList.add('booksReadAnimate');
+      }
     })
+
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(20,20);
+    ctx.lineTo(40,0);
+    ctx.lineWidth=6;
+    ctx.strokeStyle='#555';
+    ctx.stroke();
   }
 
   render(){
@@ -48,6 +63,7 @@ class Description extends Component{
             Looking for a new web developer that is easy to get along with and is always hungry to learn more? My name is Tyler Trout, and I am a self-taught aspiring web developer. I am looking to achieve my first employment oppritunity.
           </p>
         </h3>
+        <canvas id='arrowIndicator' height='25' width='40'/>
         <h3 className='window rightSide'>
           <header>Experience</header><hr/>
           <p>

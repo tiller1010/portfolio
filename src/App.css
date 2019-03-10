@@ -1,7 +1,5 @@
 /*
 Animations
-animation-name: flyIn;
-animation-duration: 2s;
 */
 
 @keyframes flyIn{
@@ -19,6 +17,37 @@ animation-duration: 2s;
   }
 }
 
+@keyframes bob{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pageStack{
+  0%{
+    background: #f1f1f1;
+    box-shadow: 3px 3px 0 #ddd;
+  }
+  33%{
+    background: #f5f5f5;
+    box-shadow: 3px 3px 0 #ddd, 6px 6px 0 #ccc;
+  }
+  66%{
+    background: #fafafa;
+    box-shadow: 3px 3px 0 #ddd, 6px 6px 0 #ccc, 9px 9px 0 #bbb;
+  }
+  100%{
+    background: white;
+    box-shadow: 3px 3px 0 #ddd, 6px 6px 0 #ccc, 9px 9px 0 #bbb, 12px 12px 0 #aaa;
+  }
+}
+
 .animatedContainer{
   perspective: 3000px;
   -webkit-perspective: 3000px;
@@ -29,6 +58,29 @@ animation-duration: 2s;
 .animated{
   animation-name: flyIn;
   animation-duration: .5s;
+}
+
+.booksReadAnimate{
+  animation-name: pageStack;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+/*
+Animated arrow indicator
+*/
+
+#arrowIndicator{
+  position: absolute;
+  animation-name: bob;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  width: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body{
@@ -146,16 +198,17 @@ p{
   width:240px;
   position: absolute;
   right:0px;
-  background: #0cf;
+  background-color:#005550;
   top:110px;
   font-size:30px;
   font-family: "Francois One", Helvetica, sans-serif;
   color:white;
   padding-bottom: 20px;
-  transition: box-shadow .5s;
+  transition: background-color .5s;
+  padding-left: 7px;
 }
 #blogLink:hover{
-  box-shadow: -10px 0px blue;
+  background-color: #0da;
 }
 #pencilIcon{
   height:60px;

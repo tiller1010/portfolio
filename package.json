@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "tylertrout.com",
+  "homepage": "http://tylertrout.com",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.5.2",

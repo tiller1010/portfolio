@@ -1,14 +1,14 @@
 {
-  "main.css": "tylertrout.com/static/css/main.e7779029.chunk.css",
-  "main.js": "tylertrout.com/static/js/main.281ae7cd.chunk.js",
-  "main.js.map": "tylertrout.com/static/js/main.281ae7cd.chunk.js.map",
-  "static/js/1.d2970397.chunk.js": "tylertrout.com/static/js/1.d2970397.chunk.js",
-  "static/js/1.d2970397.chunk.js.map": "tylertrout.com/static/js/1.d2970397.chunk.js.map",
-  "runtime~main.js": "tylertrout.com/static/js/runtime~main.32f81e0f.js",
-  "runtime~main.js.map": "tylertrout.com/static/js/runtime~main.32f81e0f.js.map",
-  "static/media/MyFace.jpg": "tylertrout.com/static/media/MyFace.abbe8579.jpg",
-  "static/css/main.e7779029.chunk.css.map": "tylertrout.com/static/css/main.e7779029.chunk.css.map",
-  "index.html": "tylertrout.com/index.html",
-  "precache-manifest.e70afbb95ef11e018c79f7186931b51b.js": "tylertrout.com/precache-manifest.e70afbb95ef11e018c79f7186931b51b.js",
-  "service-worker.js": "tylertrout.com/service-worker.js"
+  "main.css": "/static/css/main.e7779029.chunk.css",
+  "main.js": "/static/js/main.1716fc4f.chunk.js",
+  "main.js.map": "/static/js/main.1716fc4f.chunk.js.map",
+  "static/js/1.d2970397.chunk.js": "/static/js/1.d2970397.chunk.js",
+  "static/js/1.d2970397.chunk.js.map": "/static/js/1.d2970397.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/MyFace.jpg": "/static/media/MyFace.abbe8579.jpg",
+  "static/css/main.e7779029.chunk.css.map": "/static/css/main.e7779029.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.9d1d9ee0aa333a9a05d2a7c63eb164e4.js": "/precache-manifest.9d1d9ee0aa333a9a05d2a7c63eb164e4.js",
+  "service-worker.js": "/service-worker.js"
 }

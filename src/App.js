@@ -23,6 +23,28 @@ class Window extends Component{
 }
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      currentPage: 'about'
+    }
+    this.currentPageChanger = this.currentPageChanger.bind(this);
+    this.currentPageIndicator = this.currentPageIndicator.bind(this);
+  }
+
+  currentPageChanger(target){
+    this.setState({
+      currentPage: target
+    })
+  }
+
+  currentPageIndicator(page){
+    if(page === this.state.currentPage){
+      return {borderBottom: 'solid white'}
+    }
+    else return {}
+  }
+
   render(){
     return(
       <div>
@@ -39,9 +61,9 @@ class App extends Component {
         <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={require('./pencil.png')} alt='pencil icon'/>My Blog</a>
         <nav id='navBar'>
           <ul>
-            <Link to='/'><li>About</li></Link>
-            <Link to='/projects'><li>Projects</li></Link>
-            <Link to='/contact'><li>Contact</li></Link>
+            <Link to='/'><li onClick={()=>this.currentPageChanger('about')} style={this.currentPageIndicator('about')}>About</li></Link>
+            <Link to='/projects'><li onClick={()=>this.currentPageChanger('projects')} style={this.currentPageIndicator('projects')}>Projects</li></Link>
+            <Link to='/contact'><li onClick={()=>this.currentPageChanger('contact')} style={this.currentPageIndicator('contact')}>Contact</li></Link>
           </ul>
         </nav>
         <Window/>

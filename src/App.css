@@ -135,14 +135,16 @@ body{
   text-decoration: none;
   text-align:center;
   line-height: 70px;
-  transition: background-color .5s;
+  transition: background-color .5s, border-bottom .5s;
+  -webkit-transition: background-color .5s, border-bottom .5s;
+  -moz-transition: background-color .5s, border-bottom .5s;
+  -ms-transition: background-color .5s, border-bottom .5s;
+  border-bottom: solid #002e2e;
 }
 #navBar li:hover{
   background-color: #9f9;
   cursor:pointer;
-}
-.currentPage{
-  border-bottom: solid white;
+  border-bottom: solid #9f9;
 }
 
 .window{

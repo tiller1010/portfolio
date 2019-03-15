@@ -300,7 +300,8 @@ a{
     font-size: 50px;
     position: relative;
     top:35px;
-    left:60px;
+    margin:auto;
+    text-align: center;
     width:300px;
     white-space: nowrap;
   }
@@ -317,13 +318,14 @@ a{
   }
 
   #navBar ul{
-    text-align: left;
+    text-align: center;
     margin: 0;
+    padding: 0;
     white-space: nowrap;
   }
   #navBar li{
     height:70px;
-    width:100px;
+    width:120px;
     line-height: 70px;
     font-size: 13px;
   }
@@ -396,13 +398,10 @@ a{
 
   #name{
     font-size: 40px;
-    width:0;
-    white-space: nowrap;
-    transform: translateX(-25px);
   }
 
   #navBar li{
-    width:70px;
+    width:90px;
   }
 
   .link{

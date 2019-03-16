@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
 const bookSeperatorStlye={
-  textDecoration:'underline',
   textAlign: 'center',
   width:'90%',
   margin:'100px auto',
-  fontFamily:'serif',
+  fontFamily:'"Francois One", Helvetica, sans-serif',
   background: 'white',
   letterSpacing: '4px',
   padding:'10px 0',

@@ -67,6 +67,7 @@ class App extends Component {
           </ul>
         </nav>
         <Window/>
+        <button id='scrollUpBtn' onClick={()=>{window.scrollTo(0, 0);}}>Top</button>
       </div>
     );
   }

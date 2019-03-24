@@ -272,6 +272,24 @@ a{
   text-align: center;
 }
 
+#scrollUpBtn{
+  width:75%;
+  height:100px;
+  line-height: 100px;
+  margin:auto;
+  display: block;
+  border:none;
+  font-size: 40px;
+  transform: translateY(80px);
+  font-family: "Francois One", Helvetica, sans-serif;
+  background-color: #005550;
+  transition: background-color .5s;
+  color:white;
+}
+#scrollUpBtn:hover{
+    background-color: #0da;
+}
+
 @media only screen and (max-width:900px){
   #name{
     font-size: 70px;

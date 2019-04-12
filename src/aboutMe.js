@@ -59,7 +59,7 @@ class Description extends Component{
         <h3 className='window animated' style={{visibility:'visible'}}>
           <header>Introduction</header><hr/>
           <p>
-            Looking for a new web developer that is easy to get along with and is always hungry to learn more? My name is Tyler Trout, and I am a self-taught aspiring web developer. I am looking to achieve my first employment oppritunity.
+            Looking for a new web developer that is easy to get along with and is always hungry to learn more? My name is Tyler Trout, and I am a self-taught aspiring web developer. I am looking to achieve my first employment opportunity.
           </p>
         </h3>
         <canvas id='arrowIndicator' height='25' width='40'/>
@@ -84,9 +84,9 @@ class Description extends Component{
         <hr style={{transform:'translateY(50px)'}}/>
         <h1 id='bookSeperator' style={bookSeperatorStlye}>Books I have read:</h1>
         <Book side='left' image='https://images-na.ssl-images-amazon.com/images/I/51lu4ArIFYL._SX258_BO1,204,203,200_.jpg' title='JavaScript The Definitive Guide' description='My first coding book, JavaScript The Definitive Guide felt almost like reading a code dictionary. Useful feature or not, this book covers what seems like everything at first. This book breaks down the language itself as well as the tools that can be used on the client side. This was a satisfying book to finish and really opened up my eyes to the scope of the language.'/>
-        <Book side='right' image='https://images-na.ssl-images-amazon.com/images/I/51FHuacxYjL._SX379_BO1,204,203,200_.jpg' title='Learning React' description='React seemed dificult for me to learn at first. I was used to keeping HTML and JS seperated, but now I was supposed to marry the two in JSX? Learning React made React simple to understand and use. The book walks the reader through a few projects, teaching concepts by simply adding new features. React has become my favorite library and is what I used to build this portfolio.'/>
+        <Book side='right' image='https://images-na.ssl-images-amazon.com/images/I/51FHuacxYjL._SX379_BO1,204,203,200_.jpg' title='Learning React' description='React seemed difficult for me to learn at first. I was used to keeping HTML and JS seperated, but now I was supposed to marry the two in JSX? Learning React made React simple to understand and use. The book walks the reader through a few projects, teaching concepts by simply adding new features. React has become my favorite library and is what I used to build this portfolio.'/>
         <Book side='left' image='https://covers.oreillystatic.com/images/9780596517748/lrg.jpg' title='JavaScript: The Good Parts' description='JavaScript: The Good Parts was a brief but dense read. The book covers all the best and worst practices one should use or avoid when using JavaScript. The book is an excellent reference for highlighting the way JavaScript works and the way it should be used.'/>
-        <Book side='right' image='https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/7872/9781787285705.jpg' title='WordPress Complete' description='This book starts out fairly simple, as one would expect. Creating blog posts and adding plugins and themes are great features of WordPress but not too dificult to understand. However, the book becomes more challenging when it has the reader developing their own themes and plugins with PHP code. WordPress Complete was a pleasure to read, just with an unexpected dificulty spike.'/>
+        <Book side='right' image='https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/7872/9781787285705.jpg' title='WordPress Complete' description='This book starts out fairly simple, as one would expect. Creating blog posts and adding plugins and themes are great features of WordPress but not too difficult to understand. However, the book becomes more challenging when it has the reader developing their own themes and plugins with PHP code. WordPress Complete was a pleasure to read, just with an unexpected difficulty spike.'/>
       </div>
     );
   }

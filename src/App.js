@@ -27,11 +27,14 @@ class Window extends Component{
 class App extends Component {
   constructor(props){
     super(props);
-    this.state={
-      currentPage: 'about'
-    }
     this.currentPageChanger = this.currentPageChanger.bind(this);
     this.currentPageIndicator = this.currentPageIndicator.bind(this);
+  }
+
+  componentWillMount(){
+    this.setState({
+      currentPage: 'about'
+    })
   }
 
   currentPageChanger(target){

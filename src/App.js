@@ -5,6 +5,7 @@ import './App.css';
 import Description from './aboutMe.js';
 import Projects from './projectList.js';
 import Contacts from './contacts.js'
+import BooksReadPage from './booksRead.js';
 import LinkIcon from './links.js';
 import MyFace from './MyFace.jpg';
 
@@ -16,6 +17,7 @@ class Window extends Component{
           <Route exact path='/' component={Description}/>
           <Route path='/projects' component={Projects}/>
           <Route path='/contact' component={Contacts}/>
+          <Route path='/books' component={BooksReadPage}/>
         </Switch>
       </main>
     );

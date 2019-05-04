@@ -88,6 +88,15 @@ class BooksReadPage extends Component{
           This book walks the reader through core fundamentals of PHP and SQL, and ends with projects such as an app that requires
           users to register or login, a forum, and an ecommerce shopping system. The book is a great introduction to building backend web-apps.
         "/>
+        <Book side='right' image='https://covers.oreillystatic.com/images/0636920033868/lrg.jpg' title='Modern PHP' author='Josh Lockhart'
+        description="
+          Modern PHP covers all of the best practices and tricks of PHP.
+          While I was reading this book, I learned about the PHP Standards Recommendation,
+          how to manage dependencies with Composer, and even how to build PHP from source.
+          There are plenty of things that this book mentioned that caught my interest such as
+          Facebook’s “Hack” & HipHopVM, Nginx, and Laravel. This book was a great glimpse into
+          the world of backend development with PHP.
+        "/>
       </div>
     );
   }

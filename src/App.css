@@ -158,6 +158,11 @@ body{
   font-family: "Francois One", Helvetica, sans-serif;
   letter-spacing: 6px;
 }
+
+.heading-font{
+  font-family: "Francois One", Helvetica, sans-serif;
+}
+
 .rightSide{
   position: relative;
   margin-top: 10px;
@@ -224,14 +229,12 @@ p{
 }
 
 .codeBox{
-  position: absolute;
-  transform: translateX(-350%);
   border-radius:25px;
   background-color:#005aaa;
   color: white;
   font-weight:bold;
   padding:34px 20px 34px 20px;
-  margin:15px 0px 4px 80%;
+  margin-right: 15px;
   width:100px;
   text-align: center;
   text-indent: 0px;
@@ -247,7 +250,6 @@ p{
   color: white;
   font-weight:bold;
   padding:20px;
-  margin:15px 0px 4px 80%;
   width:100px;
   text-align: center;
   text-indent: 0px;
@@ -296,9 +298,6 @@ a{
     font-size: 70px;
     top:240px;
     right:5px;
-  }
-  .projectBox{
-    margin-left:70%;
   }
   .link{
     height:40px;
@@ -367,18 +366,9 @@ a{
   }
   .codeBox{
     padding: 20px;
-    left:15%;
-  }
-  .projectBox{
-    margin-left:50%;
   }
 }
 
-@media only screen and (max-width:620px){
-  .codeBox{
-    left: 160px;
-  }
-}
 
 @media only screen and (max-width:540px){
   .rightSide header{
@@ -392,9 +382,6 @@ a{
 }
 
 @media only screen and (max-width:480px){
-  .codeBox{
-    left: 210px;
-  }
   #email{
     transform: translateX(-10%) scale(.7);
   }
@@ -434,9 +421,6 @@ a{
     top:95px;
   }
 
-  .codeBox{
-    left:250px;
-  }
   #email{
     transform: translateX(-18%) scale(.7);
   }

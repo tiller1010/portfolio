@@ -84,7 +84,7 @@ class BooksReadPage extends Component{
         <Book side='left' image='https://prodimage.images-bn.com/pimages/9781840788273_p0_v1_s550x406.jpg' title='PHP & MySQL' author='Mike McGrath'
         description="
           Following along with this book, I found it very straight forward and comprehensive.
-          Everything is in simple and steps that are annotated with a description of that code's purpose.
+          Everything is in simple and easy steps that are annotated with a description of that code's purpose.
           This book walks the reader through core fundamentals of PHP and SQL, and ends with projects such as an app that requires
           users to register or login, a forum, and an ecommerce shopping system. The book is a great introduction to building backend web-apps.
         "/>

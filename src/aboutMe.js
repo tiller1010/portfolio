@@ -60,7 +60,7 @@ class Description extends Component{
         <h3 className='window rightSide'>
           <header>Experience</header><hr/>
           <p>
-          I have spent more than nine months immersing myself in a strenuous
+          I have spent more than a year immersing myself in a strenuous
           self-education regimen: reading excellent coding books (including
           JavaScript: the Definitive Guide, Learning React, JavaScript: the
           Good Parts and WordPress Complete), completing challenges

@@ -97,6 +97,13 @@ class BooksReadPage extends Component{
           Facebook’s “Hack” & HipHopVM, Nginx, and Laravel. This book was a great glimpse into
           the world of backend development with PHP.
         "/>
+        <Book side='left' image='https://i.ebayimg.com/images/g/etUAAOSwvjtc1Lyg/s-l300.jpg' title='HTML&CSS' author='Jon Duckett'
+        description="
+          This book was a very pleasant review of the core front-end languages. 
+          Everything is laid out is a very aesthetically pleasing way, complete with photos and illustrations. 
+          I was able to pick up a few things I had missed, as well as a few design principles. 
+          HTML&CSS is a great introduction or source for review, and I often recommend it as a good starting point.
+        "/>
       </div>
     );
   }

@@ -60,7 +60,7 @@ class App extends Component {
         <div id='icons'>
           <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
           <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
-          <LinkIcon source='https://media.licdn.com/dms/image/C510BAQEd4yTPDOI9-A/company-logo_200_200/0?e=2159024400&v=beta&t=QT6S3z6wJgaazts6PVy8jjs54C4uS2xwFYX72f4em88' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
+          <LinkIcon source='https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
           <LinkIcon source='https://files.startupranking.com/startup/thumb/38390_69f954470a75c5911fc23cf91e70453ef07a07aa_edabit_m.jpeg' alternative='edabit' destination='https://edabit.com/user/kCWDEGqZhSpYbmhoZ'/>
         </div>
         <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={require('./pencil.png')} alt='pencil icon'/>My Blog</a>

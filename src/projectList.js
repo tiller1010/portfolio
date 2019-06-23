@@ -118,6 +118,15 @@ class Projects extends Component{
               <ProjectLink name= 'Redux Vacation' link='https://tiller1010.github.io/redux-vacation'/>
             </div>
           </h3>
+          <h3 className='projectFrame'>
+            This is my first app that uses backend technology. The hospital app is built with PHP and SQL.
+            After logging in or making an account, users can submit appointments with their doctor of choice. All of which is stored in a database.
+            Private doctor accounts can then view the appointments that were submitted to them by pulling from the database.
+            <div style={{display: 'flex', justifyContent: 'flex-end', margin: '12px'}}>
+              <a target='_blank' rel="noopener noreferrer" href='https://github.com/tiller1010/redux-vacation'><div className='codeBox'>Code</div></a>
+              <ProjectLink name= 'Hospital App' link='hospitalapp.esy.es'/>
+            </div>
+          </h3>
         </div>
       );
     }
@@ -126,13 +135,21 @@ class Projects extends Component{
           <div className='window animated' style={{visibility:'visible'}}>
             <ProjectHeading projectType={this.state.projectType} switchType={this.switchType}/>
               <h3 className='projectFrame'>
-              Gears & Grub event in Erie. They needed a site that would list all bands, food trucks, and vendors.
-              They also needed to direct visitors to the location of the event, as well as the weather.
-              I built them a Wordpress site so that they could manage updates and posts as well as utilize a few plugins.
-              <div style={{display: 'flex', justifyContent: 'flex-end', margin: '12px'}}>
-                <ProjectLink name= 'Gears & Grub' link='https://gearsandgruberie.com'/>
-              </div>
-            </h3>
+                 Siri Thai Truck asked for help customizing their Weebly page. 
+                 I got to learn a little bit about how Weebly works and added custom elements and styles.
+                 The page now includes new fonts, a slight gradient, and a site icon.
+                <div style={{display: 'flex', justifyContent: 'flex-end', margin: '12px'}}>
+                  <ProjectLink name= 'Siri Thai Truck' link='http://sirithaitruck.com'/>
+                </div>
+              </h3>
+              <h3 className='projectFrame'>
+                The Gears & Grub event in Erie needed a site that would list all bands, food trucks, and vendors. 
+                They also needed to direct visitors to the location of the event, as well as the weather. 
+                I built them a Wordpress site so that they could manage updates and posts as well as utilize a few plugins.
+                <div style={{display: 'flex', justifyContent: 'flex-end', margin: '12px'}}>
+                  <ProjectLink name= 'Gears & Grub' link='https://gearsandgruberie.com'/>
+                </div>
+              </h3>
           </div>
         )
       }

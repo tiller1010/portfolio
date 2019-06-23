@@ -5,7 +5,7 @@ import { faSyncAlt } from '@fortawesome/free-solid-svg-icons'
 const projectHeadingStyle = {
   borderBottom: 'solid black',
   width: '40%',
-  marginLeft: '40px',
+  marginLeft: '10%',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'baseline',
@@ -124,7 +124,7 @@ class Projects extends Component{
             Private doctor accounts can then view the appointments that were submitted to them by pulling from the database.
             <div style={{display: 'flex', justifyContent: 'flex-end', margin: '12px'}}>
               <a target='_blank' rel="noopener noreferrer" href='https://github.com/tiller1010/redux-vacation'><div className='codeBox'>Code</div></a>
-              <ProjectLink name= 'Hospital App' link='hospitalapp.esy.es'/>
+              <ProjectLink name= 'Hospital App' link='http://hospitalapp.esy.es'/>
             </div>
           </h3>
         </div>

@@ -1,4 +1,15 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons'
+
+const projectHeadingStyle = {
+  borderBottom: 'solid black',
+  width: '40%',
+  marginLeft: '40px',
+  display: 'flex',
+  justifyContent: 'space-between',
+  marginBottom: '10px'
+}
 
 class ProjectLink extends Component{
   constructor(props){
@@ -27,10 +38,36 @@ class ProjectLink extends Component{
   }
 }
 
+class ProjectHeading extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      projectType: 'Personal'
+    }
+    this.switchType = this.switchType.bind(this);
+  }
+
+  switchType(){
+    this.setState({
+      projectType: this.state.projectType == 'Personal' ? 'Client\'s' : 'Personal'
+    })
+  }
+
+  render(){
+    return(
+      <div style={projectHeadingStyle}>
+        <h2>{this.state.projectType}</h2>
+        <button style={{}} onClick={this.switchType}>Switch<FontAwesomeIcon icon={faSyncAlt} /></button>
+    </div>
+    )
+  }
+}
+
 class Projects extends Component{
   render(){
     return(
       <div className='window animated' style={{visibility:'visible'}}>
+      <ProjectHeading/>
         <h3 className='projectFrame'>
           Generic Store is an interactive store page with a visual shopping cart
           indicator. The app was made in an object-oriented style. Each object

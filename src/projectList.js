@@ -123,7 +123,7 @@ class Projects extends Component{
             After logging in or making an account, users can submit appointments with their doctor of choice. All of which is stored in a database.
             Private doctor accounts can then view the appointments that were submitted to them by pulling from the database.
             <div style={{display: 'flex', justifyContent: 'flex-end', margin: '12px'}}>
-              <a target='_blank' rel="noopener noreferrer" href='https://github.com/tiller1010/redux-vacation'><div className='codeBox'>Code</div></a>
+              <a target='_blank' rel="noopener noreferrer" href='https://github.com/tiller1010/hospitalApp'><div className='codeBox'>Code</div></a>
               <ProjectLink name= 'Hospital App' link='http://hospitalapp.esy.es'/>
             </div>
           </h3>

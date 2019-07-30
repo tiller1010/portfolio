@@ -7,7 +7,7 @@ import Projects from './projectList.js';
 import Contacts from './contacts.js'
 import BooksReadPage from './booksRead.js';
 import LinkIcon from './links.js';
-import MyFace from './MyFace.jpg';
+import MyFace from './MyFace.png';
 
 class Window extends Component{
   render() {
@@ -53,9 +53,7 @@ class App extends Component {
   render(){
     return(
       <div>
-        <div id='faceContainer'>
-          <img src={MyFace} id='face' alt='My face'/>
-        </div>
+        <div id='faceContainer' style={{background: 'url(' + MyFace + ') center center/cover'}}></div>
         <h1 id='name'>Tyler Trout</h1>
         <div id='icons'>
           <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>

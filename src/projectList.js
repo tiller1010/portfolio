@@ -62,7 +62,7 @@ class Projects extends Component{
 
   switchType(){
     this.setState({
-      projectType: this.state.projectType == 'Personal' ? 'Client\'s' : 'Personal'
+      projectType: this.state.projectType === 'Personal' ? 'Client\'s' : 'Personal'
     })
   }
 

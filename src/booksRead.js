@@ -104,6 +104,14 @@ class BooksReadPage extends Component{
           I was able to pick up a few things I had missed, as well as a few design principles. 
           HTML&CSS is a great introduction or source for review, and I often recommend it as a good starting point.
         "/>
+        <Book side='right' image='https://images-na.ssl-images-amazon.com/images/I/41NGBmeH1uL._SX403_BO1,204,203,200_.jpg' title='Learning Node.js Development' author='Andrew Mead'
+        description="
+        	Learning Node.js Development teaches all of its topics step by step.
+        	This project based book covers all of the fundamentals of Node and some popular NPM modules.
+        	I learned how to create command line apps, how to make asynchronous requests with promises,
+        	and how to deploy and test web apps with Express. Node is great if you are already familiar with JavaScript,
+        	and NPM has a seemingly limitless supply of tools to get started building just about anything.
+        "/>
       </div>
     );
   }

@@ -127,6 +127,16 @@ class Projects extends Component{
               <ProjectLink name= 'Hospital App' link='http://hospitalapp.esy.es'/>
             </div>
           </h3>
+          <h3 className='projectFrame'>
+            This project is a dog personality test. It is built with Node and Express.
+            The site uses two APIs: one for finding the dogs' traits and another for googling an image of the dog.
+            The traits are ranked based on the users answers and then compared to the API response.
+            As an added bonus, this project also uses Sass styles compiled with Grunt.
+            <div style={{display: 'flex', justifyContent: 'flex-end', margin: '12px'}}>
+              <a target='_blank' rel="noopener noreferrer" href='https://github.com/tiller1010/dog-personality'><div className='codeBox'>Code</div></a>
+              <ProjectLink name= 'Dog Personality' link='http://dog-personality.herokuapp.com'/>
+            </div>
+          </h3>
         </div>
       );
     }

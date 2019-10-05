@@ -31,7 +31,7 @@ Animations
 
 @keyframes pageStack{
   0%{
-    background: #f1f1f1;
+    background: #f0f0f0;
     box-shadow: 3px 3px 0 #ddd;
   }
   33%{
@@ -60,7 +60,7 @@ Animations
   animation-duration: .5s;
 }
 
-.booksReadAnimate{
+#booksButton:hover{
   animation-name: pageStack;
   animation-duration: .5s;
   animation-fill-mode: forwards;
@@ -173,10 +173,10 @@ body{
   margin-top: 10px
 }
 
-h3{
+.box-container{
   text-indent: 5%;
   padding: 30px;
-  margin:4%;
+  margin: 4%;
   width:70%;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   background: linear-gradient(175deg,#466451bb 75%,#343);
@@ -185,7 +185,11 @@ h3{
   text-align: justify;
   box-shadow:10px 10px 40px #343;
 }
+.box-container:first-of-type{
+  margin-top: 150px;
+}
 p{
+  font-size: 1.1em;
   text-indent: 2%;
 }
 
@@ -259,8 +263,15 @@ a{
   text-decoration: none;
 }
 
+.projectFrame{
+  text-align: center;
+  margin: 4% auto;
+  position: relative;
+}
+
 #contacts{
   text-align: center;
+  margin:  150px auto 4% auto;
 }
 #emailBox{
   padding:20px;
@@ -346,9 +357,9 @@ a{
     width:30px;
     margin:10px;
   }
-  h3{
+  .box-container{
     width:80%;
-    margin:auto;
+    margin: 4% auto;
     font-size:16px;
     text-align: left;
   }
@@ -369,7 +380,7 @@ a{
     text-align: left;
     transform: translateX(0px);
   }
-  #bookSeperator{
+  #booksButton{
     font-size: 21px;
     margin-bottom:0;
   }

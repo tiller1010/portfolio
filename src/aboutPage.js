@@ -10,7 +10,8 @@ const bookSeperatorStlye={
   letterSpacing: '4px',
   padding:'10px 0',
   transform:'translateY(40px)',
-  color:'#0da'
+  color:'#0da',
+  textShadow: '1px 1px black'
 }
 
 class Description extends Component{
@@ -29,9 +30,6 @@ class Description extends Component{
           frames[i].classList.add('animated');
         }
       }
-      if(booksRead.getBoundingClientRect().top<385){
-        booksRead.classList.add('booksReadAnimate');
-      }
     })
 
     ctx.beginPath();
@@ -46,7 +44,7 @@ class Description extends Component{
   render(){
     return(
       <div className='animatedContainer'>
-        <h3 className='window animated' style={{visibility:'visible'}}>
+        <div className='window box-container animated' style={{visibility:'visible'}}>
           <header>Introduction</header><hr/>
           <p>
           Do you need a new web developer (or member of your web team)?
@@ -55,9 +53,9 @@ class Description extends Component{
           I am a self-taught aspiring web developer in search of my first web-related
           employment opportunity.
           </p>
-        </h3>
+        </div>
         <canvas id='arrowIndicator' height='25' width='40'/>
-        <h3 className='window rightSide'>
+        <div className='window box-container rightSide'>
           <header>Experience</header><hr/>
           <p>
           I have spent more than a year immersing myself in a strenuous
@@ -68,8 +66,8 @@ class Description extends Component{
           projects. I have been supplementing these efforts by attending
           monthly meet-ups with Coderie, so I can learn from the best!
           </p>
-        </h3>
-        <h3 className='window leftSide'>
+        </div>
+        <div className='window box-container leftSide'>
           <header>Skills</header><hr/>
           <p>
           I am well-versed in HTML, CSS, JavaScript, and more! My
@@ -78,8 +76,8 @@ class Description extends Component{
           jQuery. I use a variety of technologies to assist myself in
           development, indluding Git, GitHub and Chrome Dev Tools.
           </p>
-        </h3>
-        <h3 className='window rightSide'>
+        </div>
+        <div className='window box-container rightSide'>
           <header>Moving forward</header><hr/>
           <p>
           I love to learn new things and do so every day. For example, just
@@ -92,9 +90,9 @@ class Description extends Component{
           delighted me, and I am excited to see what I might create in the
           future!
           </p>
-        </h3>
+        </div>
         <hr style={{transform:'translateY(50px)'}}/>
-        <Link to='/books'><h1 id='bookSeperator' style={bookSeperatorStlye}>Books I have read:</h1></Link>
+        <Link to='/books'><h1 id='booksButton' style={bookSeperatorStlye}>Books I have read:</h1></Link>
       </div>
     );
   }

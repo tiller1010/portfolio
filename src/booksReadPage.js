@@ -14,13 +14,13 @@ const bookSeperatorStlye={
 
 const Book=(props)=>{
   return(
-    <div className='window' style={{marginTop: '10px'}}>
-      <h3 className={props.side + 'Side'}>
+    <div className={`window box-container ${props.side}Side`} style={{marginTop: '10px'}}>
+      <div>
         <img src={props.image} alt='book' style={{float: props.side, height:'200px', width:'160px', margin:'10px'}}/>
         <header>{props.title}</header>
         <h5 style={{textAlign: props.side, transform: props.side === 'right' ? 'translateX(-39px)' : ''}}>by: {props.author}</h5><hr/>
         <p>{props.description}</p>
-      </h3>
+      </div>
     </div>
   )
 }

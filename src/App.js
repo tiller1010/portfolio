@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Switch, Route} from 'react-router-dom';
 import './App.css';
-import Description from './aboutMe.js';
-import Projects from './projectList.js';
-import Contacts from './contacts.js'
-import BooksReadPage from './booksRead.js';
+import Description from './aboutPage.js';
+import Projects from './projectPage.js';
+import Contacts from './contactsPage.js'
+import BooksReadPage from './booksReadPage.js';
 import LinkIcon from './links.js';
 import MyFace from './MyFace.png';
 

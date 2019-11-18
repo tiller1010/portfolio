@@ -158,6 +158,12 @@ class Projects extends Component{
               I built them a Wordpress site so that they could manage updates and posts as well as utilize a few plugins."
               Name='Gears & Grub'
               UserLink='https://gearsandgruberie.com'/>
+            <ProjectFrame Description="
+              Dobbins Dogs wanted a site that features the new logo and ways for customers to connect.
+              The site connects the user through phone, email, and social media.
+              I was able to customize my own website template to create this site."
+              Name='Dobbins Dogs'
+              UserLink='https://dobbinsdogs.com'/>
           </div>
         )
       }

@@ -24,8 +24,8 @@ class ProjectHeading extends Component {
   }
 }
 
-class ProjectLink extends Component{
-  constructor(props){
+class ProjectFrame extends Component {
+    constructor(props){
     super(props);
     this.state={
       viewed: '☐'
@@ -39,28 +39,29 @@ class ProjectLink extends Component{
     });
   }
 
+  componentDidUpdate(prevProps){
+    if(this.props.Name !== prevProps.Name)
+    this.setState({
+      viewed:'☐',
+    });
+  }
+
   render(){
-    return(
-      <div>
-         <a target='_blank' rel="noopener noreferrer" href={this.props.link}>
-           <div onClick={this.handleClick} className='projectBox'>{this.props.name}</div>
-        </a>
-        <p style={{position:'absolute', right:'10px', width:'100px'}}>Viewed: {this.state.viewed}</p>
-    </div>
+    return (
+      <div className='projectFrame box-container'>
+        {this.props.Description}
+        <div style={{display: 'flex', justifyContent: 'center', margin: '12px'}}>
+          {this.props.CodeLink ? <a target='_blank' rel="noopener noreferrer" href={this.props.CodeLink}><div className='codeBox'>Code</div></a> : ''}
+          <div>
+             <a target='_blank' rel="noopener noreferrer" href={this.props.UserLink}>
+               <div onClick={this.handleClick} className='projectBox'>{this.props.Name}</div>
+            </a>
+            <p style={{position:'absolute', right:'10px', width:'100px'}}>Viewed: {this.state.viewed}</p>
+          </div>
+        </div>
+      </div>
     );
   }
-}
-
-const ProjectFrame = (props) => {
-  return (
-    <div className='projectFrame box-container'>
-      {props.Description}
-      <div style={{display: 'flex', justifyContent: 'center', margin: '12px'}}>
-        {props.CodeLink ? <a target='_blank' rel="noopener noreferrer" href={props.CodeLink}><div className='codeBox'>Code</div></a> : ''}
-        <ProjectLink name={props.Name} link={props.UserLink}/>
-      </div>
-    </div>
-  );
 }
 
 class Projects extends Component{

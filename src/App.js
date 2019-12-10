@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Switch, Route} from 'react-router-dom';
 import './App.css';
-import Description from './aboutPage.js';
 import Projects from './projectPage.js';
 import Contacts from './contactsPage.js'
-import BooksReadPage from './booksReadPage.js';
 import LinkIcon from './links.js';
 import MyFace from './MyFace.png';
 
@@ -14,10 +12,8 @@ class Window extends Component{
     return(
       <main>
         <Switch>
-          <Route exact path='/' component={Description}/>
-          <Route path='/projects' component={Projects}/>
+          <Route path='/' exact component={Projects}/>
           <Route path='/contact' component={Contacts}/>
-          <Route path='/books' component={BooksReadPage}/>
         </Switch>
       </main>
     );
@@ -33,7 +29,7 @@ class App extends Component {
 
   componentWillMount(){
     this.setState({
-      currentPage: 'about'
+      currentPage: 'projects'
     })
   }
 
@@ -54,7 +50,10 @@ class App extends Component {
     return(
       <div>
         <div id='faceContainer' style={{background: 'url(' + MyFace + ') center center/cover'}}></div>
-        <h1 id='name'>Tyler Trout</h1>
+        <div className="title-description">
+          <h1 id='name'>Tyler Trout</h1>
+          <h2>Junior Web-Developer</h2>
+        </div>
         <div id='icons'>
           <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
           <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
@@ -64,8 +63,7 @@ class App extends Component {
         <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={require('./pencil.png')} alt='pencil icon'/>My Blog</a>
         <nav id='navBar'>
           <ul>
-            <Link to='/'><li onClick={()=>this.currentPageChanger('about')} style={this.currentPageIndicator('about')}>About</li></Link>
-            <Link to='/projects'><li onClick={()=>this.currentPageChanger('projects')} style={this.currentPageIndicator('projects')}>Projects</li></Link>
+            <Link to='/'><li onClick={()=>this.currentPageChanger('projects')} style={this.currentPageIndicator('projects')}>Projects</li></Link>
             <Link to='/contact'><li onClick={()=>this.currentPageChanger('contact')} style={this.currentPageIndicator('contact')}>Contact</li></Link>
           </ul>
         </nav>

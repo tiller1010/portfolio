@@ -148,12 +148,6 @@ class Projects extends Component{
           <div className='window animated' style={{visibility:'visible'}}>
             <ProjectHeading projectType={this.state.projectType} switchType={this.switchType}/>
             <ProjectFrame Description="
-              Siri Thai Truck asked for help customizing their Weebly page. 
-              I got to learn a little bit about how Weebly works and added custom elements and styles.
-              The page now includes new fonts, a slight gradient, and a site icon."
-              Name='Siri Thai Truck'
-              UserLink='http://sirithaitruck.com'/>
-            <ProjectFrame Description="
               The Gears & Grub event in Erie needed a site that would list all bands, food trucks, and vendors. 
               They also needed to direct visitors to the location of the event, as well as the weather. 
               I built them a Wordpress site so that they could manage updates and posts as well as utilize a few plugins."

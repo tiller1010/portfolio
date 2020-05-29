@@ -95,11 +95,11 @@ class Projects extends Component{
             CodeLink='https://github.com/tiller1010/generic-store'
             UserLink='https://tiller1010.github.io/generic-store/'/>
           <ProjectFrame Description='
-            The family tree project also utilizes an object-oriented style, but
+            The family tree uses an object-oriented style, but
             this project allows for more objects to be created by the user. The
-            user may even upload an image by file or URL. When clicked, a
-            person box will display that person&#39;s properties, and a line will be
-            drawn on the canvas, connecting child to parent. This project
+            user may even upload an image by file or URL. When a person is clicked, 
+            the box will display that object&#39;s properties, and a line connecting parent to child will be
+            drawn on the canvas. This project
             also includes a feature that uses regular expressions to search
             for all mothers and fathers.'
             Name='Family Tree'
@@ -140,6 +140,15 @@ class Projects extends Component{
             Name='Dog Personality'
             CodeLink='https://github.com/tiller1010/dog-personality'
             UserLink='http://dog-personality.herokuapp.com'/>
+          <ProjectFrame Description="
+            Chitty Chatter is a chat app built with the Laravel framework. The framework makes building
+            modern web apps easy and elegant. Laravel has an instant authentication system and the Eloquent ORM. For the front-end, Laravel comes bundled with Bootstrap and Vue. Bootstrap made styling
+            quick and painless, and Vue helped me create a real-time chat component. Conversations are dynamic with
+            the users' actions being broadcasted to the Pusher API. Users will see when the other user types, sends a message, or
+            leaves the conversation."
+            Name='Chitty Chatter'
+            CodeLink='https://github.com/tiller1010/laravel-social-app'
+            UserLink='https://chittychatter.net'/>
         </div>
       );
     }

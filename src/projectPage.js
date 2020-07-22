@@ -76,7 +76,17 @@ class Projects extends Component{
   switchType(){
     this.setState({
       projectType: this.state.projectType === 'Personal' ? 'Client\'s' : 'Personal'
-    })
+    });
+    var rotateIcons = document.querySelector('svg.fa-sync-alt');
+    var rotateDegrees = 10;
+    var rotating = setInterval(() => {
+      rotateIcons.style.transform = `rotate(${rotateDegrees}deg) scale(1.5)`;
+      rotateDegrees += 10;
+      if(rotateDegrees === 360){
+        rotateDegrees = 1;
+        clearInterval(rotating);
+      }
+    }, 10);
   }
 
   render(){

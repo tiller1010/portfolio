@@ -56,7 +56,7 @@ class ProjectFrame extends Component {
              <a target='_blank' rel="noopener noreferrer" href={this.props.UserLink}>
                <div onClick={this.handleClick} className='projectBox'>{this.props.Name}</div>
             </a>
-            <p style={{position:'absolute', right:'10px', width:'100px'}}>Viewed: {this.state.viewed}</p>
+            <p style={{position:'absolute', right:'10px', bottom: '5px', margin: '0', width:'100px'}}>Viewed: {this.state.viewed}</p>
           </div>
         </div>
       </div>

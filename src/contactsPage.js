@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import gmailLogo from './gmail-logo.png';
-import meetupLogo from './meetup-logo.svg';
-import linkedinLogo from './LinkedIn-Logo.png';
-import upworkLogo from './upwork-logo.png';
+import gmailLogo from './images/gmail-logo.png';
+import meetupLogo from './images/meetup-logo.svg';
+import linkedinLogo from './images/LinkedIn-Logo.png';
+import upworkLogo from './images/upwork-logo.png';
 
 const Contact=(props)=>{
   return(

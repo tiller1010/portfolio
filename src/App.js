@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Switch, Route} from 'react-router-dom';
-import './App.css';
+import './css/App.css';
 import Projects from './projectPage.js';
 import Contacts from './contactsPage.js'
 import LinkIcon from './links.js';
-import MyFace from './MyFace.png';
+import MyFace from './images/MyFace.png';
+import PencilIcon from './images/pencil.png';
 
 class Window extends Component{
   render() {
@@ -52,7 +53,7 @@ class App extends Component {
         <div id='faceContainer' style={{background: 'url(' + MyFace + ') center center/cover'}}></div>
         <div className="title-description">
           <h1 id='name'>Tyler Trout</h1>
-          <h2>Junior Web-Developer</h2>
+          <h2>Web-Developer</h2>
         </div>
         <div id='icons'>
           <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
@@ -60,7 +61,7 @@ class App extends Component {
           <LinkIcon source='https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
           <LinkIcon source='https://files.startupranking.com/startup/thumb/38390_69f954470a75c5911fc23cf91e70453ef07a07aa_edabit_m.jpeg' alternative='edabit' destination='https://edabit.com/user/kCWDEGqZhSpYbmhoZ'/>
         </div>
-        <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={require('./pencil.png')} alt='pencil icon'/>My Blog</a>
+        <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={PencilIcon} alt='pencil icon'/>My Blog</a>
         <nav id='navBar'>
           <ul>
             <Link to='/'><li onClick={()=>this.currentPageChanger('projects')} style={this.currentPageIndicator('projects')}>Projects</li></Link>
@@ -68,7 +69,15 @@ class App extends Component {
           </ul>
         </nav>
         <Window/>
-        <button id='scrollUpBtn' onClick={()=>{window.scrollTo(0, 0);}}>Top</button>
+        <button id='scrollUpBtn' onClick={()=>{
+          var scrolling = setInterval(() => {
+            var offset = window.pageYOffset;
+            window.scrollTo(0, offset - 100);
+            if(offset === 0){
+              clearInterval(scrolling);
+            }
+          }, 20)
+        }}>Top</button>
       </div>
     );
   }

@@ -84,9 +84,21 @@ Animated arrow indicator
 }
 
 body{
-  background-image:linear-gradient(to right,#00ba8a,#afe3d0 ,#afe3d0 60%);
+  background: linear-gradient(to right,#00ba8a,#afe3d0 ,#afe3d0 60%);
   padding-bottom: 20px;
+  position: relative;
 }
+
+/* Start Popup */
+.popup-closed{
+  display: none;
+  opacity: 0;
+}
+.popup-open{
+  display: flex;
+  opacity: 1;
+}
+/* End Popup */
 
 #faceContainer{
   height:205px;

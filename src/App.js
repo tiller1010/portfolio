@@ -7,11 +7,36 @@ import Contacts from './contactsPage.js'
 import LinkIcon from './links.js';
 import MyFace from './images/MyFace.png';
 import PencilIcon from './images/pencil.png';
+import Popup from './Popup.js';
 
 class Window extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      popupOpenStatus: 'closed'
+    }
+    this.dismissPopup = this.dismissPopup.bind(this);
+  }
+  
+  componentDidMount(){
+    // Wait 5 seconds before showing popup
+    setTimeout(() => {
+      this.setState({
+        popupOpenStatus: 'open'
+      })
+    }, 1000)
+  }
+
+  dismissPopup(){
+    this.setState({
+      popupOpenStatus: 'closed'
+    })
+  }
+
   render() {
     return(
       <main>
+        <Popup dismissPopup={this.dismissPopup} popupOpenStatus={this.state.popupOpenStatus}/>
         <Switch>
           <Route path='/' exact component={Projects}/>
           <Route path='/contact' component={Contacts}/>

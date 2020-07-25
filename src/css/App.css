@@ -98,6 +98,12 @@ body{
   display: flex;
   opacity: 1;
 }
+.popup svg.fa-times-circle:hover{
+  color: #f00;
+}
+.popup label, .popup input {
+  display: block;
+}
 /* End Popup */
 
 #faceContainer{
@@ -223,7 +229,7 @@ p{
   width:240px;
   position: absolute;
   right:0px;
-  background-color:#005550;
+  background-color:#002e2e;
   top:110px;
   font-size:30px;
   font-family: "Francois One", Helvetica, sans-serif;

@@ -89,7 +89,7 @@ class Popup extends Component {
 	render(){
 		return(
 			<div style={popupContainerStyles} className={`popup popup-${this.props.popupOpenStatus}`}>
-				<form action="" method="POST" style={this.state.popupFormStyles}>
+				<form action="/template" method="GET" style={this.state.popupFormStyles}>
 					<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
 					<h2>Generate a free template?</h2>
 					<div>

@@ -1,0 +1,139 @@
+import React, { Component } from 'react';
+
+// Try this to hide the frame
+// https://stackoverflow.com/questions/50777333/react-hide-a-component-on-a-specific-route
+
+class TemplatePage extends Component {
+	
+	render(){
+		return (
+			<div>
+				<header>
+					<div id="logo"></div>
+					<h1 id='title'>Your Site Title</h1> <div id='siteDesc'>Your tagline</div>
+				</header>
+
+				<div id='fixed_utilities'>
+					<span classNameName="phone-number">☏ (123)456-7890</span>
+				</div>
+
+				<main>
+
+					<div className="carousel-container">
+						<div className='carousel'>
+							<div className='carouselTrackContainer'>
+								<ul className='carouselTrack'>
+
+									<li className="carouselSlide currentSlide">
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+											<div className="banner-content">
+												{/* Content */}
+											    <p>
+											    	<a className="banner-link" href="" aria-label=""></a>
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li className="carouselSlide">
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+											<div className="banner-content">
+												{/* Content */}
+											    <p>
+											    	<a className="banner-link" href="" aria-label=""></a>
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li className="carouselSlide">
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+											<div className="banner-content">
+												{/* Content */}
+											    <p>
+											    	<a className="banner-link" href="" aria-label=""></a>
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li className="carouselSlide">
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+											<div className="banner-content">
+												{/* Content */}
+											    <p>
+											    	<a className="banner-link" href="" aria-label=""></a>
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li className="carouselSlide">
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+											<div className="banner-content">
+												{/* Content */}
+											    <p>
+											    	<a className="banner-link" href="" aria-label=""></a>
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li className="carouselSlide">
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+											<div className="banner-content">
+												{/* Content */}
+											    <p>
+											    	<a className="banner-link" href="" aria-label=""></a>
+												</p>
+											</div>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+							<div className="carouselButtons">
+								<button className='carouselButtonLeft'>&lt</button>
+								<button className='carouselButtonRight'>&gt</button>
+							</div>
+
+							<div className='carouselNav'>
+								<button className='carouselIndicator currentSlide'></button>
+								<button className='carouselIndicator'></button>
+								<button className='carouselIndicator'></button>
+								<button className='carouselIndicator'></button>
+								<button className='carouselIndicator'></button>
+								<button className='carouselIndicator'></button>
+							</div>
+						</div>
+					</div>
+					{/* End of carousel */}
+
+					<div className="quotes content">
+						<p>Quote 1</p>
+						<p>Quote 2</p>
+						<p>Quote 3</p>
+						<p>Quote 4</p>
+					</div>
+
+					<div className='content'>
+						<form id="contactForm" action="#:" method="post" enctype="text/plain">
+							<label for="Name">Name:</label>
+							<input className="contact" type="text" name="Name"/>
+							<label for="Comment">Comment:</label>
+							<textarea className="contact" name="Message"></textarea>
+							<input type="submit" className="submit" value="Send"/>
+						</form>
+					</div>
+
+				</main>
+				
+				<footer>
+					<h3>Website Template by Tyler Trout 2020</h3>
+				</footer>
+			</div>
+		);
+	}
+}
+
+export default TemplatePage;

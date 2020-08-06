@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 import './css/App.css';
 import Projects from './projectPage.js';
 import Contacts from './contactsPage.js'
+import TemplatePage from './TemplatePage.js'
 import LinkIcon from './links.js';
 import MyFace from './images/MyFace.png';
 import PencilIcon from './images/pencil.png';
@@ -40,6 +41,7 @@ class Window extends Component{
         <Switch>
           <Route path='/' exact component={Projects}/>
           <Route path='/contact' component={Contacts}/>
+          <Route path='/template' component={TemplatePage}/>
         </Switch>
       </main>
     );

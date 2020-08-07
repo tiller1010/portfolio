@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import {Switch, Route} from 'react-router-dom';
-import './css/App.css';
+import {Switch, Route, withRouter} from 'react-router-dom';
 import Projects from './projectPage.js';
 import Contacts from './contactsPage.js'
 import TemplatePage from './TemplatePage.js'
@@ -59,6 +58,21 @@ class App extends Component {
     this.setState({
       currentPage: 'projects'
     })
+
+     if(this.props.location.pathname.match(/template/)) {
+        require('./css/template.css');
+     } else {
+        require('./css/App.css');
+     }
+  }
+
+  componentWillUpdate(){
+     if(this.props.location.pathname.match(/template/)) {
+        require('./css/template.css');
+       window.location.reload(false);
+     } else {
+        require('./css/App.css');
+     }
   }
 
   currentPageChanger(target){
@@ -74,40 +88,58 @@ class App extends Component {
     else return {}
   }
 
+
   render(){
+    const { location } = this.props;
+
     return(
       <div>
-        <div id='faceContainer' style={{background: 'url(' + MyFace + ') center center/cover'}}></div>
-        <div className="title-description">
-          <h1 id='name'>Tyler Trout</h1>
-          <h2>Web-Developer</h2>
-        </div>
-        <div id='icons'>
-          <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
-          <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
-          <LinkIcon source='https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
-          <LinkIcon source='https://files.startupranking.com/startup/thumb/38390_69f954470a75c5911fc23cf91e70453ef07a07aa_edabit_m.jpeg' alternative='edabit' destination='https://edabit.com/user/kCWDEGqZhSpYbmhoZ'/>
-        </div>
-        <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={PencilIcon} alt='pencil icon'/>My Blog</a>
-        <nav id='navBar'>
-          <ul>
-            <Link to='/'><li onClick={()=>this.currentPageChanger('projects')} style={this.currentPageIndicator('projects')}>Projects</li></Link>
-            <Link to='/contact'><li onClick={()=>this.currentPageChanger('contact')} style={this.currentPageIndicator('contact')}>Contact</li></Link>
-          </ul>
-        </nav>
+        {
+          // If on template page, hide frame
+          !location.pathname.match(/template/) ? 
+            <div>
+              <div id='faceContainer' style={{background: 'url(' + MyFace + ') center center/cover'}}></div>
+              <div className="title-description">
+                <h1 id='name'>Tyler Trout</h1>
+                <h2>Web-Developer</h2>
+              </div>
+              <div id='icons'>
+                <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
+                <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
+                <LinkIcon source='https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
+                <LinkIcon source='https://files.startupranking.com/startup/thumb/38390_69f954470a75c5911fc23cf91e70453ef07a07aa_edabit_m.jpeg' alternative='edabit' destination='https://edabit.com/user/kCWDEGqZhSpYbmhoZ'/>
+              </div>
+              <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={PencilIcon} alt='pencil icon'/>My Blog</a>
+              <nav id='navBar'>
+                <ul>
+                  <Link to='/'><li onClick={()=>this.currentPageChanger('projects')} style={this.currentPageIndicator('projects')}>Projects</li></Link>
+                  <Link to='/contact'><li onClick={()=>this.currentPageChanger('contact')} style={this.currentPageIndicator('contact')}>Contact</li></Link>
+                </ul>
+              </nav>
+            </div>
+          :
+            null
+        }
+
         <Window/>
-        <button id='scrollUpBtn' onClick={()=>{
-          var scrolling = setInterval(() => {
-            var offset = window.pageYOffset;
-            window.scrollTo(0, offset - 100);
-            if(offset === 0){
-              clearInterval(scrolling);
-            }
-          }, 20)
-        }}>Top</button>
+
+        {
+          // If on template page, hide frame
+          !location.pathname.match(/template/) ? 
+          <button id='scrollUpBtn' onClick={()=>{
+            var scrolling = setInterval(() => {
+              var offset = window.pageYOffset;
+              window.scrollTo(0, offset - 100);
+              if(offset === 0){
+                clearInterval(scrolling);
+              }
+            }, 20)
+          }}>Top</button>
+          : null
+        }
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

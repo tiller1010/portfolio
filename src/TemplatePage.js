@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-// Try this to hide the frame
-// https://stackoverflow.com/questions/50777333/react-hide-a-component-on-a-specific-route
-
 class TemplatePage extends Component {
 	
 	render(){
@@ -14,7 +11,7 @@ class TemplatePage extends Component {
 				</header>
 
 				<div id='fixed_utilities'>
-					<span classNameName="phone-number">☏ (123)456-7890</span>
+					<span className="phone-number">☏ (123)456-7890</span>
 				</div>
 
 				<main>
@@ -25,7 +22,7 @@ class TemplatePage extends Component {
 								<ul className='carouselTrack'>
 
 									<li className="carouselSlide currentSlide">
-										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover"}}>
 											<div className="banner-content">
 												{/* Content */}
 											    <p>
@@ -36,7 +33,7 @@ class TemplatePage extends Component {
 									</li>
 
 									<li className="carouselSlide">
-										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover"}}>
 											<div className="banner-content">
 												{/* Content */}
 											    <p>
@@ -47,7 +44,7 @@ class TemplatePage extends Component {
 									</li>
 
 									<li className="carouselSlide">
-										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover"}}>
 											<div className="banner-content">
 												{/* Content */}
 											    <p>
@@ -58,7 +55,7 @@ class TemplatePage extends Component {
 									</li>
 
 									<li className="carouselSlide">
-										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover"}}>
 											<div className="banner-content">
 												{/* Content */}
 											    <p>
@@ -69,7 +66,7 @@ class TemplatePage extends Component {
 									</li>
 
 									<li className="carouselSlide">
-										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover"}}>
 											<div className="banner-content">
 												{/* Content */}
 											    <p>
@@ -80,7 +77,7 @@ class TemplatePage extends Component {
 									</li>
 
 									<li className="carouselSlide">
-										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover;"}}>
+										<div className='carouselImage' style={{background: "url('https://dummyimage.com/720x400') no-repeat center center/cover"}}>
 											<div className="banner-content">
 												{/* Content */}
 											    <p>
@@ -117,10 +114,10 @@ class TemplatePage extends Component {
 					</div>
 
 					<div className='content'>
-						<form id="contactForm" action="#:" method="post" enctype="text/plain">
-							<label for="Name">Name:</label>
+						<form id="contactForm" action="#:" method="post" encType="text/plain">
+							<label htmlFor="Name">Name:</label>
 							<input className="contact" type="text" name="Name"/>
-							<label for="Comment">Comment:</label>
+							<label htmlFor="Comment">Comment:</label>
 							<textarea className="contact" name="Message"></textarea>
 							<input type="submit" className="submit" value="Send"/>
 						</form>

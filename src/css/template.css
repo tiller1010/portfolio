@@ -1,0 +1,384 @@
+/*Hide popup on template*/
+.popup.popup-open{
+	display: none !important;
+}
+
+body{
+	margin:0;
+	background-color:#D8C266;
+	left:0;
+}
+main{
+	margin-top: 180px;
+}
+
+header{
+	position: absolute;
+	left:0;
+	top: 0;
+	background: #cc2628;
+	width:100%;
+	height:150px;
+	color:white;
+	border-bottom: solid white 20px;
+}
+
+#logo,h1{
+	display:inline-block;
+}
+
+#logo{
+	height: 150px;
+	width:150px;
+	/*background-image:url(images/logo.png);*/
+	background-repeat: no-repeat;
+	background-size:contain;
+	margin-left:10px;
+}
+
+#title{
+	position: relative;
+	top:-30px;
+	margin-left: 30px;
+	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 4px;
+	font-size: 60px;
+	transform: translateY(-15px);
+	text-shadow:
+		-4px -4px 0 #000,
+		4px -4px 0 #000,
+		-4px 4px 0 #000,
+		4px 4px 0 #000;
+	white-space: nowrap;
+	z-index: 11;
+}
+
+#siteDesc{
+	font-family: 'Lobster Two', cursive;
+	font-size: 50px;
+	position: absolute;
+	right: 100px;
+	font-style: italic;
+	top:100px;
+}
+
+#fixed_utilities{
+	position: fixed;
+	top:0;
+	right:0;
+	padding:0 10px 0 10px;
+	background: #cc2628;
+	font-family: arial;
+	color: white;
+	z-index:10;
+}
+
+h2{
+	margin-left: 60%;
+	padding:15px;
+	border:solid #55555577;
+	font-family:sans-serif;
+	font-size: 20px;
+	background-color:white;
+	text-align: center;
+}
+
+p{
+	padding:50px 10px;
+	border:solid #55555511;
+	font-family:sans-serif;
+	font-size: 16px;
+	background-color:white;
+	text-indent: 22px;
+}
+
+.content{
+	border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    border: 3px solid #ccc;
+}
+
+.sub_footer{
+	width:80%;
+	height:400px;
+	margin:auto;
+	background: grey;
+}
+
+footer{
+	background-color: white;
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-family: arial;
+	text-align: center;
+}
+
+.toggleBox{
+	height:150px;
+	width:200px;
+	text-align: center;
+	display: none;
+	color: white;
+	font-family: arial;
+	font-size: 25px;
+	line-height: 150px;
+}
+
+/*Carousel Styles*/
+button{
+	cursor: pointer;
+}
+
+.carousel-container{
+	background-color: #ccc;
+
+}
+
+.carousel{
+	position: relative;
+	height:450px;
+	border-bottom: 10px solid #bf5353;
+}
+
+.carouselImage{
+	display: none;
+	width:100%;
+	height: 100%;
+}
+
+.carouselTrackContainer{
+	position: relative;
+	height:100%;
+	background: #ccc;
+	overflow: hidden;
+	/* z-index: 2; */
+}
+
+.carouselTrack{
+	padding:0;
+	margin:0;
+	list-style:none;
+	position: relative;
+	height:100%;
+	transition: transform 250ms ease-in;
+}
+
+.carouselSlide{
+	position: absolute;
+	top:0;
+	bottom:0;
+	width:100%;
+}
+
+.carouselButtons{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 40%;
+	z-index: 2;
+}
+
+.carouselButtonLeft{
+	width: 40%;
+	height: 38px;
+	margin: 1px 10px;
+	border: 0;
+	background-color: #bf5353aa;
+}
+
+.carouselButtonRight{
+	width: 40%;
+	height: 38px;
+	margin: 1px 10px;
+	border: 0;
+	background-color: #bf5353aa;
+}
+
+.carousel > button{
+	transition: background-color .5s;
+}
+
+.carousel .carouselButtons > button:hover{
+	background-color: #fff;
+}
+
+.carouselNav{
+	transform: translateY(-40px);
+	width:100%;
+	padding: 11px 0;
+	background-color: #cccccccc;
+
+}
+
+.carouselIndicator{
+	margin:0 15px;
+	border:0;
+	border-radius: 50%;
+	background:grey;
+	height:11px;
+	width:11px;
+	padding: 0;
+	transition: background .5s;
+}
+
+.carouselIndicator:hover{
+	background: #fff;
+}
+
+.carouselIndicator.currentSlide{
+	background:black;
+}
+/*End carousel*/
+
+#address{
+	border:solid #55555577;
+	width:500px;
+	height:100%;
+	padding-top: 10px;
+	margin-left:40px;
+	background-color: white;
+}
+#mapImage{
+	transform: translateY(4px);
+	width:500px;
+}
+.addressLabel{
+	font-family: sans-serif;
+	margin-left: 5px;
+}
+.addressValue{
+	float:right;
+	margin-right: 5px;
+}
+
+#contactForm{
+	font-family: arial;
+	background: white;
+	padding:12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact{
+	margin:13px;
+	padding: 10px 0;
+	font-family: arial;
+}
+textarea{
+	min-height: 100px;
+}
+.submit{
+	background-color: #D36E57;
+	cursor: pointer;
+	padding: 15px 0;
+	color: #fff;
+	font-size: 1.5em;
+	border: none;
+	transition: background-color .5s;
+}
+.submit:hover{
+	background-color: #cc2628;
+}
+
+
+footer h3{
+	margin: 0;
+}
+
+@media only screen and (max-width: 960px){
+	header{
+		height:120px;
+	}
+	#logo{
+		height:120px;
+		width:120px;
+	}
+	#title{
+		position: absolute;
+		top:18px;
+		transform: translateY(-6px);
+		font-size:45px;
+	}
+	#siteDesc{
+		top:70px;
+	}
+	main{
+		position: relative;
+		top:-25px;
+	}
+	main > *{
+		margin:5px 0 5px 0;
+	}
+}
+@media only screen and (max-width: 775px){
+	#siteDesc{
+		top:90px;
+		font-size: 30px;
+	}
+	.carouselButtons{
+		width: unset;
+		min-width: 60px;
+	}
+	.carouselButtonLeft, .carouselButtonRight{
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 580px){
+	header{
+		height: 80px;
+	}
+	#logo{
+		height:800px;
+		width:80px;
+	}
+	#title{
+		transform: translate(-25px,-8px);
+		font-size:25px;
+		text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+	}
+	#fixed_utilities{
+		font-size:13px;
+	}
+	#siteDesc{
+		display: none;
+	}
+	main{
+		margin-top: 140px;
+	}
+	h2{
+		font-size: 16px;
+	}
+	footer h3{
+		font-size: 13px;
+	}
+	#address{
+		width:90%;
+		margin:auto;
+	}
+	#mapImage{
+		width:100%;
+	}
+	.contact{
+		margin:5px;
+	}
+}
+
+@media only screen and (max-width: 350px){
+	#title{
+		transform: translateX(-10px);
+	}
+	#siteDesc{
+		font-size: 21px;
+		transform: translate(30px, 10px);
+	}
+	
+}

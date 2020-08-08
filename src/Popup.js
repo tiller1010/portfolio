@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { withRouter } from 'react-router-dom';
 
 const popupContainerStyles = {
 	position: 'absolute',
@@ -81,63 +82,73 @@ class Popup extends Component {
 		let newState = {};
 		newState[key] = event.target.value;
 		this.setState(newState);
+		sessionStorage.setItem(key, event.target.value);
 	}
 
 	componentWillUpdate(){
 	}
 
 	render(){
-		return(
-			<div style={popupContainerStyles} className={`popup popup-${this.props.popupOpenStatus}`}>
-				<form action="/#/template" method="GET" style={this.state.popupFormStyles}>
-					<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
-					<h2>Generate a free template?</h2>
-					<div>
-						<label htmlFor="logo">Upload your logo</label>
-						<input type="file" name="logo" onChange={this.handleUploadChange} required/>
-					</div>
-					<div className="image-preview-container">
-						<div style={this.state.logo ? popupImagePreviewStyles : {}} className="logo-preview"></div>
-					</div>
-					<div>
-						<label htmlFor="banner">Upload a banner image</label>
-						<input type="file" name="banner" onChange={this.handleUploadChange} required/>
-					</div>
-					<div className="image-preview-container">
-						<div style={this.state.banner ? popupImagePreviewStyles : {}} className="banner-preview"></div>
-					</div>
-					<div>
-						<label htmlFor="email">Enter your email</label>
-						<input type="text" name="email" onChange={this.handleChange} value={this.state.email} required/>
-					</div>
-					{ // Check if form filled
-						(this.state.logo && this.state.banner && this.state.email) 
-						? <div>
-							<input type="submit" value="Generate Now!"/>
-						  </div>
-						: ''
-					}
-					{/*
 
-					const reader = new FileReader();
-					reader.addEventListener("load", function () {
-					  frame.style.backgroundImage = `url(${ reader.result })`;
-					}, false);
-					file.addEventListener('change',function() {
-					  const image = this.files[0];
-					  if(image) reader.readAsDataURL(image);
-					}, false)
-					}
+		const { location } = this.props;
 
-					Find some open source color pickers
-					Primary color
-					Secondary color
-					Tertiary color
-					*/}
-				</form>
-			</div>
-		);
+		if(!location.pathname.match(/template/)){
+			return(
+				<div style={popupContainerStyles} className={`popup popup-${this.props.popupOpenStatus}`}>
+					<form action="/#/template" method="GET" style={this.state.popupFormStyles}>
+						<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
+						<h2>Generate a free template?</h2>
+						<div>
+							<label htmlFor="logo">Upload your logo</label>
+							<input type="file" name="logo" onChange={this.handleUploadChange} required/>
+						</div>
+						<div className="image-preview-container">
+							<div style={this.state.logo ? popupImagePreviewStyles : {}} className="logo-preview"></div>
+						</div>
+						<div>
+							<label htmlFor="banner">Upload a banner image</label>
+							<input type="file" name="banner" onChange={this.handleUploadChange} required/>
+						</div>
+						<div className="image-preview-container">
+							<div style={this.state.banner ? popupImagePreviewStyles : {}} className="banner-preview"></div>
+						</div>
+						<div>
+							<label htmlFor="email">Enter your email</label>
+							<input type="text" name="email" onChange={this.handleChange} value={this.state.email} required/>
+						</div>
+						{ // Check if form filled
+							(this.state.logo && this.state.banner && this.state.email) 
+							? <div>
+								<input type="submit" value="Generate Now!"/>
+							  </div>
+							: ''
+						}
+						{/*
+
+						const reader = new FileReader();
+						reader.addEventListener("load", function () {
+						  frame.style.backgroundImage = `url(${ reader.result })`;
+						}, false);
+						file.addEventListener('change',function() {
+						  const image = this.files[0];
+						  if(image) reader.readAsDataURL(image);
+						}, false)
+						}
+
+						Find some open source color pickers
+						Primary color
+						Secondary color
+						Tertiary color
+						*/}
+					</form>
+				</div>
+			);
+		} else {
+			return (
+				<div style={{display: 'none'}}></div>
+			);
+		}
 	}
 }
 
-export default Popup;
+export default withRouter(Popup);

@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 class TemplatePage extends Component {
+
+	componentWillMount(){
+		this.setState({
+			email: sessionStorage.getItem('email')
+		})
+	}
 	
 	render(){
 		return (
@@ -12,6 +18,7 @@ class TemplatePage extends Component {
 
 				<div id='fixed_utilities'>
 					<span className="phone-number">☏ (123)456-7890</span>
+					<span className="email">{this.state.email}</span>
 				</div>
 
 				<main>

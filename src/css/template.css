@@ -1,8 +1,3 @@
-/*Hide popup on template*/
-.popup.popup-open{
-	display: none !important;
-}
-
 body{
 	margin:0;
 	background-color:#D8C266;

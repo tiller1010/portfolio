@@ -53,6 +53,7 @@ class Popup extends Component {
 		let newState = {};
 	    let image = event.target.files[0];
 	    if(image){
+	    	console.log(image);
 			newState[key] = image.name;
 			this.setState(newState);
 
@@ -61,6 +62,7 @@ class Popup extends Component {
 	    	let frame = document.querySelector(`.${key}-preview`);
 			reader.addEventListener('load', function () {
 			  frame.style.background = `url(${ reader.result }) no-repeat center center/contain`;
+			  sessionStorage.setItem(key, reader.result);
 			}, false);
 	    	reader.readAsDataURL(image);
 

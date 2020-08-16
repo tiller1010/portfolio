@@ -35,6 +35,8 @@ class Popup extends Component {
 			logo: '',
 			banner: '',
 			email: '' ,
+			primaryColor: '' ,
+			secondaryColor: '' ,
 			popupFormStyles: {
 				position: 'fixed',
 				top: '25%',
@@ -100,48 +102,45 @@ class Popup extends Component {
 					<form action="/#/template" method="GET" style={this.state.popupFormStyles}>
 						<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
 						<h2>Generate a free template?</h2>
-						<div>
-							<label htmlFor="logo">Upload your logo</label>
-							<input type="file" name="logo" onChange={this.handleUploadChange} required/>
-						</div>
-						<div className="image-preview-container">
-							<div style={this.state.logo ? popupImagePreviewStyles : {}} className="logo-preview"></div>
-						</div>
-						<div>
-							<label htmlFor="banner">Upload a banner image</label>
-							<input type="file" name="banner" onChange={this.handleUploadChange} required/>
-						</div>
-						<div className="image-preview-container">
-							<div style={this.state.banner ? popupImagePreviewStyles : {}} className="banner-preview"></div>
+						<div style={{display: 'flex'}}>
+							<div className="tab1inputs">
+								<div>
+									<label htmlFor="logo">Upload your logo</label>
+									<input type="file" name="logo" onChange={this.handleUploadChange} required/>
+								</div>
+								<div className="image-preview-container">
+									<div style={this.state.logo ? popupImagePreviewStyles : {}} className="logo-preview"></div>
+								</div>
+								<div>
+									<label htmlFor="banner">Upload a banner image</label>
+									<input type="file" name="banner" onChange={this.handleUploadChange} required/>
+								</div>
+								<div className="image-preview-container">
+									<div style={this.state.banner ? popupImagePreviewStyles : {}} className="banner-preview"></div>
+								</div>
+							</div>
+							<div className="tab2inputs">
+								<div>
+									<label htmlFor="primaryColor">Select a primary color</label>
+									<input type="color" name="primaryColor" onChange={this.handleChange} required/>
+								</div>
+								<div>
+									<label htmlFor="secondaryColor">Select a secondary color</label>
+									<input type="color" name="secondaryColor" onChange={this.handleChange} required/>
+								</div>
+							</div>
 						</div>
 						<div>
 							<label htmlFor="email">Enter your email</label>
 							<input type="text" name="email" onChange={this.handleChange} value={this.state.email} required/>
 						</div>
-						{ // Check if form filled
+						{ 	// Check if form filled
 							(this.state.logo && this.state.banner && this.state.email) 
 							? <div>
 								<input type="submit" value="Generate Now!"/>
 							  </div>
 							: ''
 						}
-						{/*
-
-						const reader = new FileReader();
-						reader.addEventListener("load", function () {
-						  frame.style.backgroundImage = `url(${ reader.result })`;
-						}, false);
-						file.addEventListener('change',function() {
-						  const image = this.files[0];
-						  if(image) reader.readAsDataURL(image);
-						}, false)
-						}
-
-						Find some open source color pickers
-						Primary color
-						Secondary color
-						Tertiary color
-						*/}
 					</form>
 				</div>
 			);

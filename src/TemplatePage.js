@@ -8,7 +8,9 @@ class TemplatePage extends Component {
 		this.setState({
 			email: sessionStorage.getItem('email'),
 			logo: sessionStorage.getItem('logo'),
-			banner: sessionStorage.getItem('banner')
+			banner: sessionStorage.getItem('banner'),
+			primaryColor: sessionStorage.getItem('primaryColor'),
+			secondaryColor: sessionStorage.getItem('secondaryColor')
 		})
 	}
 
@@ -107,13 +109,13 @@ class TemplatePage extends Component {
 		const currentYear = new Date().getFullYear();
 
 		return (
-			<div>
-				<header>
+			<div style={{backgroundColor: this.state.secondaryColor}}>
+				<header style={{backgroundColor: this.state.primaryColor}}>
 					<div id="logo" style={{background: this.state.logo ? `url(${this.state.logo}) no-repeat center center/cover` : ''}}></div>
 					<h1 id='title'>Your Site Title</h1> <div id='siteDesc'>Your tagline</div>
 				</header>
 
-				<div id='fixed_utilities'>
+				<div id='fixed_utilities' style={{backgroundColor: this.state.primaryColor}}>
 					<FontAwesomeIcon icon={faEnvelopeSquare} style={{cursor: 'pointer', transform: 'scale(1.5)'}} onClick={this.props.switchType} />
 					<span className="email">{this.state.email}</span>
 				</div>
@@ -158,10 +160,10 @@ class TemplatePage extends Component {
 								</ul>
 							</div>
 							<div className="carouselButtons">
-								<button className='carouselButtonLeft'>
+								<button className='carouselButtonLeft' style={{backgroundColor: this.state.primaryColor}}>
 									<FontAwesomeIcon icon={faChevronLeft} style={{cursor: 'pointer', transform: 'scale(1.5)'}} onClick={this.props.switchType} />
 								</button>
-								<button className='carouselButtonRight'>
+								<button className='carouselButtonRight' style={{backgroundColor: this.state.primaryColor}}>
 									<FontAwesomeIcon icon={faChevronRight} style={{cursor: 'pointer', transform: 'scale(1.5)'}} onClick={this.props.switchType} />
 								</button>
 							</div>
@@ -255,7 +257,7 @@ class TemplatePage extends Component {
 							<input className="contact" type="text" name="Name"/>
 							<label htmlFor="Comment">Comment:</label>
 							<textarea className="contact" name="Message"></textarea>
-							<input type="submit" className="submit" value="Send"/>
+							<input type="submit" className="submit" value="Send" style={{backgroundColor: this.state.primaryColor}}/>
 						</form>
 					</div>
 

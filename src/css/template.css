@@ -1,11 +1,9 @@
 body{
 	margin:0;
-	background-color:#D8C266;
 	left:0;
 }
 
 header{
-	background: #cc2628;
 	width:100%;
 	height:150px;
 	color:white;
@@ -52,7 +50,6 @@ header{
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-	background: #cc2628;
 	font-family: arial;
 	color: white;
 	z-index:10;
@@ -134,7 +131,6 @@ button{
 .carousel{
 	position: relative;
 	height:450px;
-	border-bottom: 10px solid #bf5353;
 }
 
 .carouselImage{
@@ -148,7 +144,6 @@ button{
 	height:100%;
 	background: #ccc;
 	overflow: hidden;
-	/* z-index: 2; */
 }
 
 .carouselTrack{
@@ -180,7 +175,6 @@ button{
 	height: 38px;
 	margin: 1px 10px;
 	border: 0;
-	background-color: #bf5353aa;
 }
 
 .carouselButtonRight{
@@ -188,7 +182,6 @@ button{
 	height: 38px;
 	margin: 1px 10px;
 	border: 0;
-	background-color: #bf5353aa;
 }
 
 .carousel > button{
@@ -265,7 +258,6 @@ textarea{
 	min-height: 100px;
 }
 .submit{
-	background-color: #D36E57;
 	cursor: pointer;
 	padding: 15px 0;
 	color: #fff;
@@ -274,7 +266,6 @@ textarea{
 	transition: background-color .5s;
 }
 .submit:hover{
-	background-color: #cc2628;
 }
 
 footer p{

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelopeSquare, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelopeSquare, faChevronRight, faChevronLeft, faBars } from '@fortawesome/free-solid-svg-icons';
 
 class TemplatePage extends Component {
 
@@ -116,8 +116,16 @@ class TemplatePage extends Component {
 				</header>
 
 				<div id='fixed_utilities' style={{backgroundColor: this.state.primaryColor}}>
-					<FontAwesomeIcon icon={faEnvelopeSquare} style={{cursor: 'pointer', transform: 'scale(1.5)'}} onClick={this.props.switchType} />
-					<span className="email">{this.state.email}</span>
+					<ul>
+						<li className="nav-item">Home</li>
+						<li className="nav-item">About</li>
+						<li className="nav-item">Contact</li>
+						<li>
+							<FontAwesomeIcon icon={faEnvelopeSquare} style={{cursor: 'pointer', transform: 'scale(1.5)', margin: '0 10px'}} onClick={this.props.switchType} />
+							<span className="email">{this.state.email}</span>
+						</li>
+					</ul>
+					<FontAwesomeIcon icon={faBars} className="hamburger" />
 				</div>
 
 				<main>

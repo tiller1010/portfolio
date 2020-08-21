@@ -101,7 +101,7 @@ body{
 .popup svg.fa-times-circle:hover{
   color: #f00;
 }
-.popup label, .popup input {
+.popup label, .popup input, .popup textarea {
   display: block;
 }
 /* End Popup */

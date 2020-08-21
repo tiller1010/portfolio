@@ -1,3 +1,7 @@
+html{
+	position: relative;
+}
+
 body{
 	margin:0;
 	left:0;
@@ -49,25 +53,47 @@ header{
     min-width: 100px;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
 	font-family: arial;
 	color: white;
 	z-index:10;
-    border-radius: 0 0 0 10%;
 }
-#fixed_utilities:hover *{
-	color: #aaf;
+#fixed_utilities ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+}
+#fixed_utilities ul li, #fixed_utilities .hamburger{
+	padding: 10px;
+	cursor: pointer;
+	transition: .25s ease color, .25s ease background-color;
+}
+#fixed_utilities .hamburger{
+	display: none;
+	font-size: 2em;
+}
+#fixed_utilities ul li:hover, #fixed_utilities .hamburger:hover{
+	color: #fff;
+	background-color: #000;
 }
 
-h2{
-	margin-left: 60%;
-	padding:15px;
-	border:solid #55555577;
-	font-family:sans-serif;
-	font-size: 20px;
-	background-color:white;
-	text-align: center;
+/* Start Popup */
+.popup-closed{
+  display: none;
+  opacity: 0;
 }
+.popup-open{
+  display: flex;
+  opacity: 1;
+}
+.popup svg.fa-times-circle:hover{
+  color: #f00;
+}
+.popup label, .popup input, .popup textarea {
+  display: block;
+}
+/* End Popup */
 
 p{
 	padding:50px 10px;
@@ -321,6 +347,12 @@ footer p{
 	}
 	#fixed_utilities{
 		font-size:13px;
+	}
+	#fixed_utilities .nav-item{
+		display: none;
+	}
+	#fixed_utilities .hamburger{
+		display: block;
 	}
 	#siteDesc{
 		display: none;

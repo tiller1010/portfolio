@@ -35,6 +35,7 @@ class Popup extends Component {
 			logo: '',
 			banner: '',
 			email: '' ,
+			message: '' ,
 			primaryColor: '' ,
 			secondaryColor: '' ,
 			popupFormStyles: {
@@ -146,7 +147,25 @@ class Popup extends Component {
 			);
 		} else {
 			return (
-				<div style={{display: 'none'}}></div>
+				<div style={{...popupContainerStyles, height: '100%', zIndex: 100}} className={`popup popup-${this.props.popupOpenStatus}`}>
+					<form action="" method="POST" style={{...this.state.popupFormStyles, maxWidth: '400px', textAlign: 'center', background: '#fff', border: '3px solid #000'}}>
+						<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
+						<h2>Want to go further?</h2>
+						<h3>Let me know what else you want to see here.</h3>
+						<div>
+							<label htmlFor="message" style={{textAlign: 'left'}}>Message:</label>
+							<textarea name="message" style={{resize: 'none', width: '100%'}} onChange={this.handleChange}></textarea>
+						</div>
+						<input type="hidden" name="email" value={this.state.email} required/>
+						{ 	// Check if form filled
+							(this.state.message) 
+							? <div>
+								<input type="submit" value="Send"/>
+							  </div>
+							: ''
+						}
+					</form>
+				</div>
 			);
 		}
 	}

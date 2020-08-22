@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle, faUpload, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
 
 const popupContainerStyles = {
@@ -44,7 +44,9 @@ class Popup extends Component {
 				background: 'linear-gradient(to right, #00ba8a, #afe3d0 ,#afe3d0 60%)',
 				border: '3px solid #00ba8a',
 				borderRadius: '25px',
-				padding: '50px'
+				padding: '20px 50px',
+				maxHeight: '590px',
+				overflowY: 'auto'
 			}
 		}
 		this.handleUploadChange = this.handleUploadChange.bind(this);
@@ -103,42 +105,50 @@ class Popup extends Component {
 					<form action="/#/template" method="GET" style={this.state.popupFormStyles}>
 						<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
 						<h2>Generate a free template?</h2>
-						<div style={{display: 'flex'}}>
+						<div style={{display: 'flex', alignItems: 'center', flexFlow: 'wrap'}}>
 							<div className="tab1inputs">
-								<div>
-									<label htmlFor="logo">Upload your logo</label>
+								<div style={{position: 'relative', marginBottom: '10px', marginRight: '10px'}}>
 									<input type="file" name="logo" onChange={this.handleUploadChange} required/>
+									<label htmlFor="logo">
+										<FontAwesomeIcon icon={faUpload} style={{marginRight: '20px'}}/>
+										Upload your logo
+									</label>
 								</div>
 								<div className="image-preview-container">
 									<div style={this.state.logo ? popupImagePreviewStyles : {}} className="logo-preview"></div>
 								</div>
-								<div>
-									<label htmlFor="banner">Upload a banner image</label>
+								<div style={{position: 'relative', marginBottom: '10px', marginRight: '10px'}}>
 									<input type="file" name="banner" onChange={this.handleUploadChange} required/>
+									<label htmlFor="banner">
+										<FontAwesomeIcon icon={faUpload} style={{marginRight: '20px'}}/>
+										Upload a banner image
+									</label>
 								</div>
 								<div className="image-preview-container">
 									<div style={this.state.banner ? popupImagePreviewStyles : {}} className="banner-preview"></div>
 								</div>
 							</div>
 							<div className="tab2inputs">
-								<div>
-									<label htmlFor="primaryColor">Select a primary color</label>
+								<div style={{position: 'relative', width: '90%', marginBottom: '10px'}}>
 									<input type="color" name="primaryColor" onChange={this.handleChange} required/>
+									<label htmlFor="primaryColor">Select a primary color</label>
 								</div>
-								<div>
-									<label htmlFor="secondaryColor">Select a secondary color</label>
+								<div style={{position: 'relative', width: '90%', marginBottom: '10px'}}>
 									<input type="color" name="secondaryColor" onChange={this.handleChange} required/>
+									<label htmlFor="secondaryColor">Select a secondary color</label>
 								</div>
 							</div>
 						</div>
-						<div>
-							<label htmlFor="email">Enter your email</label>
-							<input type="text" name="email" onChange={this.handleChange} value={this.state.email} required/>
+						<div className="emailField">
+							<div>
+								<label htmlFor="email">Enter your email</label>
+								<input type="text" name="email" onChange={this.handleChange} value={this.state.email} required/>
+							</div>
 						</div>
 						{ 	// Check if form filled
 							(this.state.logo && this.state.banner && this.state.email) 
 							? <div>
-								<input type="submit" value="Generate Now!"/>
+								<input type="submit" value="Generate Now!"/><FontAwesomeIcon icon={faChevronRight} style={{position: 'absolute', right: '30px', bottom: '30px', color: '#fff'}}/>
 							  </div>
 							: ''
 						}
@@ -160,7 +170,7 @@ class Popup extends Component {
 						{ 	// Check if form filled
 							(this.state.message) 
 							? <div>
-								<input type="submit" value="Send"/>
+								<input type="submit" value="Send"/><FontAwesomeIcon icon={faChevronRight} style={{position: 'absolute', right: '30px', bottom: '30px', color: '#fff'}}/>
 							  </div>
 							: ''
 						}

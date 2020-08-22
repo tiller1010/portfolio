@@ -90,8 +90,29 @@ header{
 .popup svg.fa-times-circle:hover{
   color: #f00;
 }
+.popup h2{
+    font-family: "Francois One", Helvetica, sans-serif;
+}
 .popup label, .popup input, .popup textarea {
   display: block;
+  font-family: sans-serif;
+}
+.popup input[type='submit']{
+  display: block;
+  margin-left: auto;
+  margin-right: -30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #0bb327;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px;
+  padding-right: 30px;
+  border: none;
+  transition: background-color .25s ease;
+}
+.popup input[type='submit']:hover{
+  background-color: #10ce30;
 }
 /* End Popup */
 

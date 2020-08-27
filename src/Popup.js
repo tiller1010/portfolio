@@ -51,6 +51,7 @@ class Popup extends Component {
 		}
 		this.handleUploadChange = this.handleUploadChange.bind(this);
 		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleUploadChange(event){
@@ -58,7 +59,6 @@ class Popup extends Component {
 		let newState = {};
 	    let image = event.target.files[0];
 	    if(image){
-	    	console.log(image);
 			newState[key] = image.name;
 			this.setState(newState);
 
@@ -92,6 +92,18 @@ class Popup extends Component {
 		sessionStorage.setItem(key, event.target.value);
 	}
 
+	handleSubmit(event){
+		event.preventDefault();
+		let xhr = new XMLHttpRequest();
+		xhr.open('GET', `http://email-capture.local/api/email-submission/store?email=${this.state.email}`); // Will need to update this url
+		xhr.onreadystatechange = function(){
+			if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+				document.querySelector('.templateGeneratorForm').submit();
+			}
+		}
+		xhr.send();
+	}
+
 	componentWillUpdate(){
 	}
 
@@ -102,7 +114,7 @@ class Popup extends Component {
 		if(!location.pathname.match(/template/)){
 			return(
 				<div style={popupContainerStyles} className={`popup popup-${this.props.popupOpenStatus}`}>
-					<form action="/#/template" method="GET" style={this.state.popupFormStyles}>
+					<form action="/#/template" method="GET" style={this.state.popupFormStyles} className="templateGeneratorForm">
 						<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
 						<h2>Generate a free template?</h2>
 						<div style={{display: 'flex', alignItems: 'center', flexFlow: 'wrap'}}>
@@ -148,7 +160,7 @@ class Popup extends Component {
 						{ 	// Check if form filled
 							(this.state.logo && this.state.banner && this.state.email) 
 							? <div>
-								<input type="submit" value="Generate Now!"/><FontAwesomeIcon icon={faChevronRight} style={{position: 'absolute', right: '30px', bottom: '30px', color: '#fff'}}/>
+								<input type="submit" value="Generate Now!" onClick={this.handleSubmit}/><FontAwesomeIcon icon={faChevronRight} style={{position: 'absolute', right: '30px', bottom: '30px', color: '#fff'}}/>
 							  </div>
 							: ''
 						}

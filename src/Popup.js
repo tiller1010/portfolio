@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle, faUpload, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle, faUpload, faChevronRight, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { withRouter } from 'react-router-dom';
 
 const popupContainerStyles = {
@@ -47,11 +47,13 @@ class Popup extends Component {
 				padding: '20px 50px',
 				maxHeight: '590px',
 				overflowY: 'auto'
-			}
+			},
+			emailMessageSent: false
 		}
 		this.handleUploadChange = this.handleUploadChange.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleMessageSubmit = this.handleMessageSubmit.bind(this);
 	}
 
 	handleUploadChange(event){
@@ -95,10 +97,25 @@ class Popup extends Component {
 	handleSubmit(event){
 		event.preventDefault();
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', `http://email-capture.local/api/email-submission/store?email=${this.state.email}`); // Will need to update this url
+		xhr.open('GET', `http://email-capture.local/api/email-submission/store?email=${encodeURIComponent(this.state.email)}`); // Will need to update this url
 		xhr.onreadystatechange = function(){
 			if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
 				document.querySelector('.templateGeneratorForm').submit();
+			}
+		}
+		xhr.send();
+	}
+
+	handleMessageSubmit(event){
+		const componentContext = this;
+		event.preventDefault();
+		let xhr = new XMLHttpRequest();
+		xhr.open('GET', `http://email-capture.local/api/email-message/store?email_address=${encodeURIComponent(sessionStorage.getItem('email'))}&message=${encodeURIComponent(this.state.message)}`); // Will need to update this url
+		xhr.onreadystatechange = function(){
+			if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+				componentContext.setState({
+					emailMessageSent: true
+				});
 			}
 		}
 		xhr.send();
@@ -170,7 +187,9 @@ class Popup extends Component {
 		} else {
 			return (
 				<div style={{...popupContainerStyles, height: '100%', zIndex: 100}} className={`popup popup-${this.props.popupOpenStatus}`}>
-					<form action="" method="POST" style={{...this.state.popupFormStyles, maxWidth: '400px', textAlign: 'center', background: '#fff', border: '3px solid #000'}}>
+					{ 	// Check if message sent
+						!this.state.emailMessageSent
+					? <form action="" method="POST" style={{...this.state.popupFormStyles, maxWidth: '400px', textAlign: 'center', background: '#fff', border: '3px solid #000'}}>
 						<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
 						<h2>Want to go further?</h2>
 						<h3>Let me know what else you want to see here.</h3>
@@ -178,15 +197,21 @@ class Popup extends Component {
 							<label htmlFor="message" style={{textAlign: 'left'}}>Message:</label>
 							<textarea name="message" style={{resize: 'none', width: '100%'}} onChange={this.handleChange}></textarea>
 						</div>
-						<input type="hidden" name="email" value={this.state.email} required/>
 						{ 	// Check if form filled
 							(this.state.message) 
 							? <div>
-								<input type="submit" value="Send"/><FontAwesomeIcon icon={faChevronRight} style={{position: 'absolute', right: '30px', bottom: '30px', color: '#fff'}}/>
+								<input type="submit" value="Send" onClick={this.handleMessageSubmit}/><FontAwesomeIcon icon={faChevronRight} style={{position: 'absolute', right: '30px', bottom: '30px', color: '#fff'}}/>
 							  </div>
 							: ''
 						}
-					</form>
+					  </form>
+					: <div style={{...this.state.popupFormStyles, maxWidth: '400px', textAlign: 'center', background: '#fff', border: '3px solid #000'}}>
+						<FontAwesomeIcon icon={faTimesCircle} style={popupCloseButtonStyles} onClick={this.props.dismissPopup}/>
+						<h2>Your message has been sent!</h2>
+						<FontAwesomeIcon icon={faCheckCircle} style={{color: '#3f1', fontSize: '4em'}}/>
+						<h3>I will send you an email reply shortly</h3>
+					  </div>
+					}
 				</div>
 			);
 		}

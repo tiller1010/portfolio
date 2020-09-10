@@ -80,11 +80,13 @@ header{
 
 /* Start Popup */
 .popup-closed{
-  display: none;
+  display: flex;
+  visibility: hidden;
   opacity: 0;
 }
 .popup-open{
   display: flex;
+  visibility: visible;
   opacity: 1;
 }
 .popup svg.fa-times-circle:hover{

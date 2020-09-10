@@ -11,7 +11,7 @@ const popupContainerStyles = {
 	width: '100%',
 	height: '98.7%',
 	backgroundColor: '#000000aa',
-	transition: 'opacity .25s ease',
+	transition: 'opacity .5s ease',
 	justifyContent: 'center'
 }
 

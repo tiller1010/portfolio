@@ -24,7 +24,7 @@ class Window extends Component{
       this.setState({
         popupOpenStatus: 'open'
       })
-    }, 1000)
+    }, 30000)
   }
 
   dismissPopup(){

@@ -42,6 +42,10 @@ class Window extends Component{
           <Route path='/contact' component={Contacts}/>
           <Route path='/template' component={TemplatePage}/>
         </Switch>
+        <button className="popup-opener" onClick={() => this.setState({popupOpenStatus: 'open'})}>
+          <span className="main-button">Generate Template</span>
+          <span className="template-button">Contact Me</span>
+        </button>
       </main>
     );
   }

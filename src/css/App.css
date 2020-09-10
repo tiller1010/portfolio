@@ -175,6 +175,25 @@ body{
 .popup input[type='submit']:hover{
   background-color: #10ce30;
 }
+.popup-opener{
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  padding: 10px;
+  background-color: #002e2e;
+  color: #fff;
+  font-size: 1em;
+  font-family: "Francois One", Helvetica, sans-serif;
+  transition: background-color .5s ease;
+  border: none;
+  cursor: pointer;
+}
+.popup-opener:hover{
+  background-color: #0da;
+}
+.popup-opener .template-button{
+  display: none;
+}
 /* End Popup */
 
 #faceContainer{

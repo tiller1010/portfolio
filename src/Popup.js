@@ -34,7 +34,8 @@ class Popup extends Component {
 		this.state = {
 			logo: '',
 			banner: '',
-			email: '' ,
+			email: '',
+			emailValid: false,
 			message: '' ,
 			primaryColor: '' ,
 			secondaryColor: '' ,
@@ -92,6 +93,17 @@ class Popup extends Component {
 		newState[key] = event.target.value;
 		this.setState(newState);
 		sessionStorage.setItem(key, event.target.value);
+		if(key === 'email'){
+			if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(event.target.value)){
+				this.setState({
+					emailValid: true
+				});
+			} else {
+				this.setState({
+					emailValid: false
+				});
+			}
+		}
 	}
 
 	handleSubmit(event){
@@ -175,7 +187,7 @@ class Popup extends Component {
 							</div>
 						</div>
 						{ 	// Check if form filled
-							(this.state.logo && this.state.banner && this.state.email) 
+							(this.state.logo && this.state.banner && this.state.email && this.state.emailValid) 
 							? <div>
 								<input type="submit" value="Generate Now!" onClick={this.handleSubmit}/><FontAwesomeIcon icon={faChevronRight} style={{position: 'absolute', right: '30px', bottom: '30px', color: '#fff'}}/>
 							  </div>

@@ -1,9 +1,9 @@
 {
-  "main.css": "/static/css/main.2764cf93.chunk.css",
-  "main.js": "/static/js/main.937f0416.chunk.js",
-  "main.js.map": "/static/js/main.937f0416.chunk.js.map",
-  "static/js/1.f03e9b35.chunk.js": "/static/js/1.f03e9b35.chunk.js",
-  "static/js/1.f03e9b35.chunk.js.map": "/static/js/1.f03e9b35.chunk.js.map",
+  "main.css": "/static/css/main.83c0f5f9.chunk.css",
+  "main.js": "/static/js/main.254a5088.chunk.js",
+  "main.js.map": "/static/js/main.254a5088.chunk.js.map",
+  "static/js/1.5c27fb19.chunk.js": "/static/js/1.5c27fb19.chunk.js",
+  "static/js/1.5c27fb19.chunk.js.map": "/static/js/1.5c27fb19.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/gmail-logo.png": "/static/media/gmail-logo.340dddaa.png",
@@ -11,8 +11,8 @@
   "static/media/LinkedIn-Logo.png": "/static/media/LinkedIn-Logo.be114d8a.png",
   "static/media/upwork-logo.png": "/static/media/upwork-logo.7abb536f.png",
   "static/media/MyFace.png": "/static/media/MyFace.35988d1a.png",
-  "static/css/main.2764cf93.chunk.css.map": "/static/css/main.2764cf93.chunk.css.map",
+  "static/css/main.83c0f5f9.chunk.css.map": "/static/css/main.83c0f5f9.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.46c9f6b6c17191a4ae7e28dd80898ac5.js": "/precache-manifest.46c9f6b6c17191a4ae7e28dd80898ac5.js",
+  "precache-manifest.da4fc8968411322f8dd35fe0fcf20ddd.js": "/precache-manifest.da4fc8968411322f8dd35fe0fcf20ddd.js",
   "service-worker.js": "/service-worker.js"
 }

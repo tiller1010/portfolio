@@ -109,7 +109,9 @@ class Popup extends Component {
 	handleSubmit(event){
 		event.preventDefault();
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', `http://email-capture.local/api/email-submission/store?email=${encodeURIComponent(this.state.email)}`); // Will need to update this url
+		// Local: http://email-capture.local
+		// Production: http://172.105.103.114/
+		xhr.open('GET', `http://172.105.103.114/api/email-submission/store?email=${encodeURIComponent(this.state.email)}`); // Will need to update this url
 		xhr.onreadystatechange = function(){
 			if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
 				document.querySelector('.templateGeneratorForm').submit();
@@ -122,7 +124,9 @@ class Popup extends Component {
 		const componentContext = this;
 		event.preventDefault();
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', `http://email-capture.local/api/email-message/store?email_address=${encodeURIComponent(sessionStorage.getItem('email'))}&message=${encodeURIComponent(this.state.message)}`); // Will need to update this url
+		// Local: http://email-capture.local
+		// Production: http://172.105.103.114/
+		xhr.open('GET', `http://172.105.103.114/api/email-message/store?email_address=${encodeURIComponent(sessionStorage.getItem('email'))}&message=${encodeURIComponent(this.state.message)}`); // Will need to update this url
 		xhr.onreadystatechange = function(){
 			if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
 				componentContext.setState({

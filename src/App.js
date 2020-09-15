@@ -64,7 +64,8 @@ class App extends Component {
     })
 
      if(this.props.location.pathname.match(/template/)) {
-        require('./css/template.css');
+        // Doesn't work after gh-pages deploy
+        // require('./css/template.css');
      } else {
         require('./css/App.css');
      }

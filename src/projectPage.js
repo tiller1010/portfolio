@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSyncAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 
 const projectHeadingStyle = {
   borderBottom: 'solid black',
@@ -115,6 +115,7 @@ class Projects extends Component{
             Name='Family Tree'
             CodeLink='https://github.com/tiller1010/familyTree'
             UserLink='https://tiller1010.github.io/familyTree'/>
+          {/*
           <ProjectFrame Description='
             This website template includes multiple pages and a few neat
             features such as an image slider, a contact form, and a menu that
@@ -124,6 +125,7 @@ class Projects extends Component{
             Name='Website Template'
             CodeLink='https://github.com/tiller1010/template1'
             UserLink='https://tiller1010.github.io/template1'/>
+          */}
           <ProjectFrame Description='
             Redux vacation is a vacation planner that uses the React-Redux
             library. Redux is used to contain the state of the application in a

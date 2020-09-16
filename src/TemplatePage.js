@@ -379,10 +379,11 @@ class TemplatePage extends Component {
 					  font-family: sans-serif;
 					}
 					.popup input[type='submit']{
+					  position: relative !important;
 					  display: block;
 					  margin-left: auto;
 					  margin-right: -30px;
-					  margin-top: 20px;
+					  margin-top: 30px;
 					  border-radius: 10px;
 					  background-color: #0bb327;
 					  cursor: pointer;
@@ -394,6 +395,10 @@ class TemplatePage extends Component {
 					}
 					.popup input[type='submit']:hover{
 					  background-color: #10ce30;
+					}
+					.popup .fa-chevron-right{
+						right: 50px !important;
+					    bottom: 50px !important;
 					}
 					.popup-opener{
 					  position: fixed;
@@ -413,6 +418,9 @@ class TemplatePage extends Component {
 					}
 					.popup-opener .main-button{
 					  display: none;
+					}
+					.popup-opener .template-button{
+					  display: block !important;
 					}
 					/* End Popup */
 

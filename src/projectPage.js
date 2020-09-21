@@ -180,6 +180,12 @@ class Projects extends Component{
               I was able to customize my own website template to create this site."
               Name='Dobbins Dogs'
               UserLink='https://dobbinsdogs.com'/>
+            <ProjectFrame Description="
+              The Atacolypse food truck serves some truly unique and tasty tacos.
+              The site uses a customized SilverStripe CMS.
+              All of the tacos and events can easily be updated at will."
+              Name='The Atacolypse'
+              UserLink='http://atacolypse-foodtruck.com/'/>
           </div>
         )
       }

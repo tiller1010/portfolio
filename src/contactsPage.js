@@ -18,7 +18,9 @@ class Contacts extends Component{
       <div className='animatedContainer'>
         <div className='window box-container animated' id='contacts' style={{visibility:'visible'}}>
           <a href='mailto:tiller1010@gmail.com' rel="noopener noreferrer"><img id='email' src={gmailLogo} alt='email' style={{width:'400px', height:'220px', display:'block', margin:'auto'}}/></a><hr/>
+        {/*
           <Contact verticalMargin='20px' width='300px' height='100px' link='https://www.meetup.com/members/261337114/' image={meetupLogo}/>
+        */}
           <Contact verticalMargin='20px' width='300px' height='80px' link='https://www.linkedin.com/in/tyler-trout-453b92173/' image={linkedinLogo}/>
           <Contact verticalMargin='35px' width='300px' link='https://www.upwork.com/freelancers/~01e2adada235766c48' image={upworkLogo}/>
         </div>

@@ -277,6 +277,17 @@ class TemplatePage extends Component {
 
 				{/* Start template style */}
 				<style type="text/css" dangerouslySetInnerHTML={{__html: `
+
+					textarea,
+					input.text,
+					input[type="text"],
+					input[type="button"],
+					input[type="submit"],
+					.input-checkbox {
+					  -webkit-appearance: none;
+					  border-radius: 0;
+					}
+					
 					html{
 						position: relative;
 					}

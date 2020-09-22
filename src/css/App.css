@@ -1,7 +1,19 @@
 /*
+Disable IOS Styles
+*/
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/*
 Animations
 */
-
 @keyframes flyIn{
   0%{
     transform: rotateX(80deg) scale(.7);

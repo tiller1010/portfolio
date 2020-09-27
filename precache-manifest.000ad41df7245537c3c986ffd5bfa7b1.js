@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/static/media/meetup-logo.aae54d55.svg"
   },
   {
-    "revision": "2d168ac6867840203fc5988220f99846",
+    "revision": "d881d58c0bbe401347849b9fea9e808a",
     "url": "/index.html"
   }
 ];

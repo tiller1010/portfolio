@@ -101,6 +101,9 @@ class App extends Component {
       <div>
         {
           // If on template page, hide frame
+                // <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
+                // <LinkIcon source='https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
+                // <LinkIcon source='https://files.startupranking.com/startup/thumb/38390_69f954470a75c5911fc23cf91e70453ef07a07aa_edabit_m.jpeg' alternative='edabit' destination='https://edabit.com/user/kCWDEGqZhSpYbmhoZ'/>
           !location.pathname.match(/template/) ? 
             <div>
               <div id='faceContainer' style={{background: 'url(' + MyFace + ') center center/cover'}}></div>
@@ -110,9 +113,7 @@ class App extends Component {
               </div>
               <div id='icons'>
                 <LinkIcon source='https://image.flaticon.com/icons/png/512/25/25231.png' alternative='GitHub' destination='https://github.com/tiller1010'/>
-                <LinkIcon source='https://cdn-images-1.medium.com/max/1200/1*QNimSWsBQxta_xt3XksQaw.png' alternative='SoloLearn' destination='https://www.sololearn.com/Profile/9677467'/>
-                <LinkIcon source='https://s3.amazonaws.com/freecodecamp/curriculum-diagram-full.jpg' alternative='freeCodeCamp' destination='https://www.freecodecamp.org/tiller1010'/>
-                <LinkIcon source='https://files.startupranking.com/startup/thumb/38390_69f954470a75c5911fc23cf91e70453ef07a07aa_edabit_m.jpeg' alternative='edabit' destination='https://edabit.com/user/kCWDEGqZhSpYbmhoZ'/>
+                <LinkIcon source='https://assets.stickpng.com/images/580b57fcd9996e24bc43c545.png' alternative='YoutTube' destination='https://www.youtube.com/channel/UCvRxV71b2UJYXHQcJ1kq7Bg'/>
               </div>
               <a id='blogLink' target='_blank' rel="noopener noreferrer" href='http://tylertroutblog.com'><img id='pencilIcon' src={PencilIcon} alt='pencil icon'/>My Blog</a>
               <nav id='navBar'>

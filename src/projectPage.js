@@ -161,6 +161,15 @@ class Projects extends Component{
             Name='Chitty Chatter'
             CodeLink='https://github.com/tiller1010/laravel-social-app'
             UserLink='https://chittychatter.net'/>
+          <ProjectFrame Description="
+            The open education app is built with the MERN stack (MongoDB, Express, React, and Node).
+            The site features American Sign Language (ASL) video challenges that are categorized by topic. The topics are each grouped by level and are fed to the app through the Strapi CMS.
+            The Strapi app actually exists in its own repository, but by configuring NGINX, I was able to serve the API and CMS under the same domain as the site.
+            With Passport, users can register with a simple username and password, or users can authenticate with Google.
+            Registered users can upload their own challenges and submit likes to the challenges submitted by other users."
+            Name='MERN Education App'
+            CodeLink='https://github.com/tiller1010/mern-app'
+            UserLink='https://openeducationapp.com'/>
         </div>
       );
     }

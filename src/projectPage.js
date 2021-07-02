@@ -177,12 +177,12 @@ class Projects extends Component{
         return(
           <div className='window animated' style={{visibility:'visible'}}>
             <ProjectHeading projectType={this.state.projectType} switchType={this.switchType}/>
-            <ProjectFrame Description="
+          {/*  <ProjectFrame Description="
               The Gears & Grub event in Erie needed a site that would list all bands, food trucks, and vendors. 
               They also needed to direct visitors to the location of the event, as well as the weather. 
               I built them a Wordpress site so that they could manage updates and posts as well as utilize a few plugins."
               Name='Gears & Grub'
-              UserLink='https://gearsandgruberie.com'/>
+              UserLink='https://gearsandgruberie.com'/>*/}
             <ProjectFrame Description="
               Dobbins Dogs wanted a site that features the new logo and ways for customers to connect.
               The site connects the user through phone, email, and social media.

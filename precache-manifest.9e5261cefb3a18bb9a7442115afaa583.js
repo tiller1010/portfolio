@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c3622019bb73e060bda1",
+    "revision": "600e6d2619027a202df9",
     "url": "/static/css/main.f14497a3.chunk.css"
   },
   {
-    "revision": "c3622019bb73e060bda1",
-    "url": "/static/js/main.c3622019.chunk.js"
+    "revision": "600e6d2619027a202df9",
+    "url": "/static/js/main.600e6d26.chunk.js"
   },
   {
     "revision": "f09cb0737c76167ba8dd",
@@ -28,15 +28,15 @@ self.__precacheManifest = [
     "url": "/static/media/upwork-logo.7abb536f.png"
   },
   {
-    "revision": "35988d1a9cc16fa7db6431b61bce461d",
-    "url": "/static/media/MyFace.35988d1a.png"
+    "revision": "6592a3f57148b20723da2180a55d735f",
+    "url": "/static/media/MyFace.6592a3f5.png"
   },
   {
     "revision": "aae54d555e6abe5085016a21cb02a5e4",
     "url": "/static/media/meetup-logo.aae54d55.svg"
   },
   {
-    "revision": "d9192384549d0ac020cc030ce9aaeebe",
+    "revision": "07b1b1faef0deae072b911ae640787e3",
     "url": "/index.html"
   }
 ];

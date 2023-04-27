@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "600e6d2619027a202df9",
-    "url": "/static/css/main.f14497a3.chunk.css"
+    "revision": "04ac55488fc8c51b3e63",
+    "url": "/static/css/main.7e111095.chunk.css"
   },
   {
-    "revision": "600e6d2619027a202df9",
-    "url": "/static/js/main.600e6d26.chunk.js"
+    "revision": "04ac55488fc8c51b3e63",
+    "url": "/static/js/main.04ac5548.chunk.js"
   },
   {
-    "revision": "f09cb0737c76167ba8dd",
-    "url": "/static/js/1.f09cb073.chunk.js"
+    "revision": "9f06973bae64df88bad4",
+    "url": "/static/js/1.9f06973b.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -24,10 +24,6 @@ self.__precacheManifest = [
     "url": "/static/media/LinkedIn-Logo.be114d8a.png"
   },
   {
-    "revision": "7abb536f86fde5877413e2bee6dd7d28",
-    "url": "/static/media/upwork-logo.7abb536f.png"
-  },
-  {
     "revision": "6592a3f57148b20723da2180a55d735f",
     "url": "/static/media/MyFace.6592a3f5.png"
   },
@@ -36,7 +32,11 @@ self.__precacheManifest = [
     "url": "/static/media/meetup-logo.aae54d55.svg"
   },
   {
-    "revision": "07b1b1faef0deae072b911ae640787e3",
+    "revision": "7abb536f86fde5877413e2bee6dd7d28",
+    "url": "/static/media/upwork-logo.7abb536f.png"
+  },
+  {
+    "revision": "624b7f01bf4818fd78be8ea4827a8a01",
     "url": "/index.html"
   }
 ];

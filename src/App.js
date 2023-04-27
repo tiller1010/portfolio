@@ -22,11 +22,13 @@ class Window extends Component{
   
   componentDidMount(){
     // Wait 5 seconds before showing popup
+    /*
     setTimeout(() => {
       this.setState({
         popupOpenStatus: 'open'
       })
     }, 30000)
+    */
   }
 
   dismissPopup(){
@@ -38,16 +40,20 @@ class Window extends Component{
   render() {
     return(
       <main>
+      {/*
         <Popup dismissPopup={this.dismissPopup} popupOpenStatus={this.state.popupOpenStatus}/>
+      */}
         <Switch>
           <Route path='/' exact component={Projects}/>
           <Route path='/contact' component={Contacts}/>
           <Route path='/template' component={TemplatePage}/>
         </Switch>
+      {/*
         <button className="popup-opener" onClick={() => this.setState({popupOpenStatus: 'open'})}>
           <span className="main-button">Generate Template</span>
           <span className="template-button">Contact Me</span>
         </button>
+      */}
       </main>
     );
   }

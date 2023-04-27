@@ -94,6 +94,7 @@ class Projects extends Component{
       return(
         <div className='window animated' style={{visibility:'visible'}}>
           <ProjectHeading projectType={this.state.projectType} switchType={this.switchType}/>
+          {/*
           <ProjectFrame Description='
             Generic Store is an interactive store page with a visual shopping cart
             indicator. The app was made in an object-oriented style. Each object
@@ -115,7 +116,6 @@ class Projects extends Component{
             Name='Family Tree'
             CodeLink='https://github.com/tiller1010/familyTree'
             UserLink='https://tiller1010.github.io/familyTree'/>
-          {/*
           <ProjectFrame Description='
             This website template includes multiple pages and a few neat
             features such as an image slider, a contact form, and a menu that
@@ -125,7 +125,6 @@ class Projects extends Component{
             Name='Website Template'
             CodeLink='https://github.com/tiller1010/template1'
             UserLink='https://tiller1010.github.io/template1'/>
-          */}
           <ProjectFrame Description='
             Redux vacation is a vacation planner that uses the React-Redux
             library. Redux is used to contain the state of the application in a
@@ -152,6 +151,7 @@ class Projects extends Component{
             Name='Dog Personality'
             CodeLink='https://github.com/tiller1010/dog-personality'
             UserLink='http://dog-personality.herokuapp.com'/>
+          */}
           <ProjectFrame Description="
             Chitty Chatter is a chat app built with the Laravel framework. The framework makes building
             modern web apps easy and elegant. Laravel has an instant authentication system and the Eloquent ORM. For the front-end, Laravel comes bundled with Bootstrap and Vue. Bootstrap made styling
